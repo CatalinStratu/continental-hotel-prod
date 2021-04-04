@@ -1,0 +1,548 @@
+#hero {
+    height: 71vh;
+    width: 100vw;
+    position: relative;
+    background:url(../images/hero.jpg) center center;
+    background-attachment: fixed;
+    background-size:cover;
+    z-index:0;
+    @include flexbox(center,flex-end,column);
+    h1 {
+        color:$purewhiteColor;
+        position:relative;
+        z-index:3;
+        letter-spacing: 6px;
+    }
+    .view_rooms {
+        position:relative;
+        z-index:3;
+        margin:20px 0px;
+        a {
+            @include button(none,1px solid $purewhiteColor,$purewhiteColor,10px 25px,unset);
+            font-size:$link;
+            &:hover {
+               border-color:$caramelColor;
+               color:$caramelColor; 
+            }
+        }
+    }
+    hr {
+        width:40px;
+        background:$purewhiteColor;
+        position: relative;
+        z-index:3;
+        margin-bottom:20px;
+    }
+    p {
+        color:$purewhiteColor;
+        position: relative;
+        z-index:3;
+        margin-bottom:20px;
+    }
+}
+#hero::after {
+    content:" ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -200px 150px 50px rgba(0, 0, 0, .70);
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+#lower_content {
+    height:10vh;
+    width:100%;
+    background-color:$ironColor;
+    position: relative;
+    @include flexbox(center,center,row);
+    .adress {
+        position: absolute;
+        left:5vw;
+        p {
+            color:$lightgrey1;
+        }
+        span {
+            color:$purewhiteColor;
+        }
+    }
+    .scroll_down {
+        position: absolute;
+        top:0;
+        width:20px;
+        height:6vh;
+        background:$caramelColor;
+        @include flexbox(center,center,unset);
+        a {
+            transform:scaleY(1.5);
+            color:$pureblackColor;
+        }
+    }
+    .email {
+        position: absolute;
+        right:5vw;
+        p {
+            color:$lightgrey1;
+        }
+        span {
+            color:$purewhiteColor;
+        }
+    }
+}
+#rent_room{
+    height:100vh;
+    background:$purewhiteColor;
+    @include flexbox(center,center,unset);
+    .room_background {
+        height:80vh;
+        width:90vw;
+        background:url(../images/rentroom.jpg);
+        background-attachment: fixed;
+        background-size:cover;
+        position:relative;
+        @include flexbox(center,center,row);
+        .content_container_before {
+            width:33%;
+            height:100%;
+            @include flexbox(center,center,column);
+            h1 {
+                color:$lightwhiteColor;
+                position: inherit;
+                z-index:7;
+            }
+            h1:nth-child(2){
+                padding-bottom:50px;
+            }
+            h5 {
+                color:$lightgrey1;
+                position: inherit;
+                z-index:7;
+                padding-bottom:50px;
+            }
+            p {
+                text-align:center;
+                color:#ccc;
+                position: inherit;
+                z-index:7;
+            }
+        }
+        .content_container_after {
+            width:33%;
+            height:100%;
+            @include flexbox(center,center,column);
+            h3 {
+                color:$lightwhiteColor;
+                position: inherit;
+                z-index:7;
+            }
+            h3:nth-child(2){
+                padding-bottom:30px;
+            }
+            h5 {
+                color:$lightgrey1;
+                position: inherit;
+                z-index:7;
+                padding-bottom:30px;
+            }
+            p {
+                text-align:center;
+                color:#ccc;
+                position: inherit;
+                z-index:7;
+            }
+            h4 {
+                color:#ccc;
+                position: inherit;
+                z-index:7;
+            }
+            span {
+                font-size:$paragraph;
+            }
+        }
+        .content_container {
+            width:33%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .rent_room_container {
+                height:85%;
+                width:90%;
+                background:$purewhiteColor;
+                position:inherit;
+                z-index:4;
+                .upper_content {
+                    width:100%;
+                    height:25%;
+                    background:$caramelColor;
+                    @include flexbox(center,center,column);
+                    h4{
+                        color:$purewhiteColor;
+                    }
+                    p{
+                        
+                        color:$purewhiteColor;
+                    }
+                }
+                .lower_content {
+                    @include flexbox(center,center,column);
+                    hr {
+                        width:85%;
+                        height:1px;
+                        background:$lightgrey1;
+                    }
+                    .checkin_out{
+                        height:10vh;
+                        width:100%;
+                        @include flexbox(flex-end,center,row);
+                        p{
+                            padding:0px 40px 5px 40px;
+                            color:$lightgrey2;
+                        }
+                    }
+                    .date_picker {
+                        height:15vh;
+                        width:100%;
+                        position: inherit;
+                        z-index:8;
+                       
+                    }
+                    .guests {
+                        height:12vh;
+                        width:100%;
+                        input[type=number]::-webkit-inner-spin-button,
+                        input[type=number]::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                        }
+                        .number-input {
+                            display: inline-flex;
+                            @include flexbox(center,center,row);
+                            width:100%;
+                            height:100%;
+                            a {
+                                border: none;
+                                cursor: pointer;
+                                margin: 0;
+                                position: relative;
+                                color:$lightgrey1;
+                                font-size:1.7vw;
+                                padding:0px 50px;
+                            } 
+                            input[type=number] {
+                                font-family: sans-serif;
+                                width: 3rem;
+                                border: none;
+                                font-size: 2rem;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                            p {
+                                font-size:$subtitle;
+                                color:$lightgrey3;
+                            }
+                        }       
+                    }
+                    .book_button {
+                        a {
+                        @include button($caramelColor,none,$purewhiteColor,10px 90px,unset);
+                       }
+                    }
+                }
+            }
+        }
+    }
+    .room_background::after {
+        content:" ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0px -200px 150px 50px rgba(0, 0, 0, .70);
+        top: 0;
+        left: 0;
+        z-index:1;
+    }
+}
+
+#relax_resort {
+    height:110vh;
+    width:100%;
+    background:$purewhiteColor;
+    @include flexbox(center,center,row);
+    .content_container_before{
+        width:50%;
+        height:100%;
+        @include flexbox(center,center,column);
+        p {
+            color:$lightgrey3;
+            margin-bottom:20px;
+            text-align:center;
+            width:80%;
+        }
+        hr {
+            height:1px;
+            width:10%;
+            background:$pureblackColor;
+        }
+        h1 {
+            margin-top:10px;
+            font-size:7vw;
+        }
+        p:nth-child(5) {
+            margin-top:20px;
+        }
+        .button {
+            a {
+                @include button($caramelColor,none,$purewhiteColor,10px 50px,unset);
+            }
+        }
+    }
+    .content_container_after {
+        width:50%;
+        height:100%;
+        position: relative;
+        @include flexbox(center,center,unset);
+        .image1 {
+            position:absolute;
+            width:25vw;
+            height:40vw;
+            top:0;
+            right:5vw;
+            z-index:6;
+        }
+        .image2 {
+            position:absolute;
+            width:30vw;
+            height:18.75vw;
+            z-index:8;
+            top:27vw;
+            right:15vw;
+        }
+        .image3 {
+            position:absolute;
+            width:22.5vw;
+            height:30vw;
+            top:10vh;
+            right:15vw;
+            z-index:7;
+        }
+        img {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+    }
+}
+#best_rooms {
+    height:150vh;
+    width:100%;
+    background:#ededed;
+    @include flexbox(center,flex-start,column);
+    .title_container {
+        width:100%;
+        height:25%;
+        @include flexbox(center,center,column);
+        p{
+            color:$lightgrey4;
+            margin-bottom:20px;
+        }
+        hr {
+            width:5%;
+            height:1px;
+            background:$lightgrey1;
+        }
+        h2 {
+            margin-top:20px;
+        }
+    }
+    .rooms_container {
+        width:100%;
+        height:65%;
+        @include flexbox(center,center,row);
+        position:relative;
+        .small_room {
+            width: 43.5%;
+            height:100%;
+            position:absolute;
+            top:0;
+            left:5vw;
+            margin-top:4px;
+            background:$purewhiteColor;
+            .upper_content {
+              
+                width:100%;
+                height:55%;
+                background:red;
+                position:relative;
+                p {
+                    position:absolute;
+                    bottom:10px;
+                    left:40px;
+                    color:$purewhiteColor;
+                    z-index:7;
+                }
+                .fa {
+                    color:$caramelColor;
+                }
+            }
+            .upper_content::after {
+                content: " ";
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                box-shadow: inset 0px -50px 40px 0px rgba(0, 0, 0, .70);
+            }
+            .lower_content {
+                width:100%;
+                height:45%;
+                position:relative;
+                .content_alignment {
+                    position:absolute;
+                    top:20px;
+                    left:40px;
+                    span {
+                        font-size:$link;
+                        color:$lightgrey2;
+                    }
+                    p{
+                        margin-top:15px;
+                        color:$lightgrey2;
+                    }
+                    a {
+                        margin-top:5px;
+                        color:$lightgrey2;
+                        font-size:1.8vw;
+                    }
+                    .button {
+                        margin-top:10px;
+                        width:45%;
+                        a {
+                            margin-top:0px;
+                            font-size:$link;
+                            @include button($pureblackColor,none,$purewhiteColor,10px 40px,unset);
+                        }
+                    }
+                }
+               
+            }
+        }
+        .four_rooms {
+            position:absolute;
+            top:0;
+            right:3vw;
+            width:50%;
+            height:100%;
+            @include flexbox(center,center,row);
+            flex-wrap: wrap;
+            .square {
+                width:45%;
+                height:49.5%;
+                background:red;
+                margin:4px;
+                position:relative;
+                p {
+                    position:absolute;
+                    bottom:10px;
+                    left:20px;
+                    color:$purewhiteColor;
+                    z-index:7;
+                    a {
+                        padding:1px;
+                        background:$caramelColor;
+                    }
+                }
+            }
+            .square::after {
+                content: " ";
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                box-shadow: inset 0px -50px 40px 0px rgba(0, 0, 0, .70);
+            }
+        }
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            
+        }
+       
+    }
+}
+#footer {
+    width:100%;
+    height:45vh;
+    background:$ironColor;
+    .upper_content {
+        height:70%;
+        width:100%;
+        background:#2c2c2c;
+        @include flexbox(center,center,row);
+        .data_container {
+            height:100%;
+            width:30%;
+            @include flexbox(flex-start,center,column);
+            h4 {
+                color:$purewhiteColor;
+            }
+            p {
+                color:$lightgrey1;
+            }
+            h5 {
+                margin-top:40px;
+                color:$purewhiteColor;
+            }
+            .social_media {
+                margin-top:40px;
+                a {
+                    font-size:2vw;
+                    margin:0px 10px;
+                    color:$lightwhiteColor;
+                }
+            }
+            .button {
+                margin-top:40px;
+                form {
+                    @include flexbox(center,center,row);
+                }
+                input[type=email] {
+                    @include button($ironColor,none,$purewhiteColor,7px 15px , unset);
+                    border:none;
+                }
+                input[type=submit] {
+                    @include button($caramelColor,none,$purewhiteColor,7px 15px , unset);
+                    border:none;
+                    &:hover {
+                        cursor:pointer;
+
+                    }
+                }
+                ::placeholder{
+                    color:$lightgrey1;
+                }
+            }
+        }
+    }
+    .lower_content {
+        height:30%;
+        width:100%;
+        background:$ironColor;
+        position:relative;
+        @include flexbox(center,center,row);
+        .links {
+            position:absolute;
+            left:4vw;
+            @include flexbox(flex-start,center,row);
+            a {
+                margin:0px 30px;
+                font-size:$navigation;
+                color:$lightgrey1;
+                transition:0.4s all ease-in-out;
+                &:hover {
+                    color:$purewhiteColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import url(//db.onlinewebfonts.com/c/32441506567156636049eb850b53f02a?family=Times+New+Roman);
+@font-face {font-family: "Times New Roman"; src: url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.eot"); src: url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.woff") format("woff"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.svg#Times New Roman") format("svg"); }
+
+$caramelColor: #C19B76;
+$ironColor: #1c1c1d;
+$purewhiteColor: #fff;
+
+$darkcaramelColor: #bf7651;
+$pureblackColor: #000;
+$lightwhiteColor: #f8f8ff;
+
+$lightgrey1: #9c9c9c;
+$lightgrey2: #7c7c7c;
+$lightgrey3: #5c5c5c;
+$lightgrey4: #3c3c3c;
+
+$title01: 4.8vw;
+$title02: 4vw;
+$title03:  3.3vw;
+$subtitle: 2.6vw;
+$navigation: 1.5vw;
+$paragraph: 1.2vw;
+$link: 1vw;
+
+@import "./general";
+@import "./scrollbar";
+@import "./header";
+@import "./authreg";
+@import "./services";
+@import "./home";
+@import "./footer";

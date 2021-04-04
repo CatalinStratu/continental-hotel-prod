@@ -1,0 +1,79 @@
+#user_container {
+    height:50vh;
+    width:100%;
+    background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/authreg/auth.jpg) center center;
+    background-attachment: fixed;
+    background-size:cover;
+    @include flexbox(center,center,column);
+    h3 {
+        color:$caramelColor;
+    }
+    p {
+        color:$purewhiteColor;
+    }
+}
+
+#auth_container,#auth_container_two {
+    height:130vh;
+    width:100%;
+    position: relative;
+    @include flexbox(center,flex-end,row);
+    .svg_container,.svg_container_two {
+        position: absolute;
+        left:2vw;
+        width:55%;
+        height:70%;
+        background:url(../images/authreg/background.svg) center no-repeat;
+        background-size:95%;
+        z-index:4;
+    }
+    .svg_container_two {
+        background:url(../images/authreg/background2.svg) center no-repeat;
+        background-size:95%;
+        width:50%;
+        height:95%;
+    }
+    .details_container {
+        width:33%;
+        margin:0px 10vw;
+        height:100%;
+        position: inherit;
+        z-index:7;
+        @include flexbox(center,center,column);
+        h4 {
+            margin-bottom:20px;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: $lightwhiteColor;
+        }
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        hr {
+            border: 1px solid $lightwhiteColor;
+            margin-bottom: 25px;
+        }
+        .registerbtn {
+            background-color: $caramelColor;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+          }   
+          .registerbtn:hover {
+            opacity:1;
+          }
+          a {
+            color: dodgerblue;
+          }
+    }
+}

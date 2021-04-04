@@ -1,0 +1,53 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+body {
+    font-family: "Times New Roman",times,serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width:100%;
+    background:$purewhiteColor;
+}
+h1 {
+    font-size: $title01;
+}
+h2 {
+    font-size: $title02;
+}
+h3 {
+    font-size: $title03;
+}
+h4 {
+    font-size:$subtitle;
+}
+h5 {
+    font-size:$navigation;
+}
+p {
+    font-size:$paragraph;
+    letter-spacing: 2px;
+}
+a {
+    font-size:$link;
+    letter-spacing: 1px;
+}
+
+@mixin flexbox($position ,$position2 , $direction) {
+    display:flex;
+    align-items: $position;
+    justify-content: $position2;
+    flex-direction: $direction;
+}
+@mixin button ($background ,$border ,$color,$leftright , $height){
+    @include flexbox(center,center ,row);
+    background:$background;
+    border: $border;
+    color:$color;
+    padding:$leftright;
+    transition: 0.4s all ease-in-out;
+    height:$height;
+}
