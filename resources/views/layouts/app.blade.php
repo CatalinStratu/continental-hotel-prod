@@ -51,7 +51,7 @@
             <a href="{{ route('index') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="Continental"></a>
         </div>
         <div class="links">
-            <a class="home" href="{{ route('index') }}">Home</a>
+            <a class="home" {{ Request::routeIs('index') ? ' style="color: rgb(193, 155, 118);" ' : '' }} href="{{ route('index') }}">Home</a>
             <a class="rooms" href="rentroom.html">Rooms</a>
             <a class="services" href="services.html">Services</a>
             <a class="about" href="{{ route('about') }}">About us</a>

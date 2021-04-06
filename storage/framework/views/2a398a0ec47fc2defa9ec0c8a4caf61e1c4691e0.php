@@ -34,11 +34,13 @@
             </div>
             <div class="big_container">
                 <div class="quickmessage_container">
-                    <form id="mail">
+                    <form action="<?php echo e(route('contact.post')); ?>" method="POST" id="mail">
+                        <?php echo csrf_field(); ?>
+                        <?php echo method_field('POST'); ?>
                         <h5>Get in touch with us</h5>
-                        <input type="text" id="myName" name="myName" placeholder="Your full name." required>
-                        <input type="text" id="myEmail" name="myEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email adress." required>
-                        <textarea id="subject" name="myMessage" placeholder="Write a message." required></textarea>
+                        <input type="text" id="myName" name="name" placeholder="Your full name." required>
+                        <input type="text" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email adress." required>
+                        <textarea id="subject" name="message" placeholder="Write a message." required></textarea>
                         <div class="submit-button">
                             <input type="submit" value="Send your message">
                         </div>

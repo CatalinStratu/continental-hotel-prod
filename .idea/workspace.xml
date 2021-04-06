@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f96eb411-e738-42c7-8ab0-bc49acf9be85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hotel.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel.com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2a398a0ec47fc2defa9ec0c8a4caf61e1c4691e0.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2a398a0ec47fc2defa9ec0c8a4caf61e1c4691e0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617306834802</updated>
       <workItem from="1617306835820" duration="9236000" />
-      <workItem from="1617741199198" duration="3212000" />
+      <workItem from="1617741199198" duration="6469000" />
     </task>
     <servers />
   </component>

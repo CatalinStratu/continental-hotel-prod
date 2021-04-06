@@ -52,7 +52,7 @@
             <a href="<?php echo e(route('index')); ?>"><img src="<?php echo e(asset('assets/images/logo.png')); ?>" alt="Continental"></a>
         </div>
         <div class="links">
-            <a class="home" href="<?php echo e(route('index')); ?>">Home</a>
+            <a class="home" <?php echo e(Request::routeIs('index') ? ' style="color: rgb(193, 155, 118);" ' : ''); ?> href="<?php echo e(route('index')); ?>">Home</a>
             <a class="rooms" href="rentroom.html">Rooms</a>
             <a class="services" href="services.html">Services</a>
             <a class="about" href="<?php echo e(route('about')); ?>">About us</a>
