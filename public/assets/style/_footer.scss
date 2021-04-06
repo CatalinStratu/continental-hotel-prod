@@ -1,1 +1,91 @@
+#footer {
+    width:100%;
+    height:45vh;
+    background:$ironColor;
+    @include flexbox(center,center,column);
+    .upper_content {
+        height:70%;
+        width:100%;
+        background:#2c2c2c;
+        @include flexbox(center,center,row);
+        .data_container {
+            height:100%;
+            width:30%;
+            @include flexbox(flex-start,center,column);
 
+            h4{
+                color:$purewhiteColor;
+                font-size:1.4vw;
+                font-weight:400;
+            }
+            p {
+                color:$lightgrey1;
+            }
+            h5 {
+                margin-top:40px;
+                color:$purewhiteColor;
+                font-size:1.2vw;
+            }
+            .social_media {
+                margin-top:40px;
+                a {
+                    font-size:2vw;
+                    margin:0px 10px;
+                    color:$lightwhiteColor;
+                }
+            }
+            .button {
+                margin-top:40px;
+                width:100%;
+               
+                form {
+                    @include flexbox(flex-start,flex-start,row);
+                }
+                input[type=email] {
+                    @include button($ironColor,none,$purewhiteColor,0.5vw 1vw , unset);
+                    border:none;
+                }
+                input[type=submit] {
+                    @include button($caramelColor,none,$purewhiteColor,0.5vw 1vw , unset);
+                    border:none;
+                    &:hover {
+                        cursor:pointer;
+
+                    }
+                }
+                ::placeholder{
+                    color:$lightgrey1;
+                }
+            }
+        }
+    }
+    .lower_content {
+        height:78px;
+        width:100%;
+        background:$ironColor;
+        position:relative;
+        @include flexbox(center,center,row);
+        .links {
+            position:absolute;
+            left:4vw;
+            @include flexbox(flex-start,center,row);
+            a {
+                margin:0px 30px;
+                font-size:$navigation;
+                color:$lightgrey1;
+                transition:0.4s all ease-in-out;
+                &:hover {
+                    color:$purewhiteColor;
+                }
+            }
+        }
+        .copyright {
+            position:absolute;
+            right:4vw;
+            p {
+                font-size:$paragraph;
+                color:$lightgrey1;
+            }
+        }
+    }
+}

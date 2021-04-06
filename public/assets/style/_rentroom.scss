@@ -1,0 +1,474 @@
+#rentroom_image_container {
+    height:50vh;
+    width:100%;
+    background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/rentroom/background.jpg) center center;
+    background-attachment: fixed;
+    background-size:cover;
+    position: relative;
+    @include flexbox(center,center,column);
+    h3 {
+        color:$caramelColor;
+    }
+    p{
+        color:$purewhiteColor;
+    }
+    .sub_navigation {
+        width:50%;
+        position: absolute;
+        bottom:15px;
+        left:30px;
+        @include flexbox(flex-end,flex-start,row);
+        a {
+            color:$lightwhiteColor;
+            margin:10px 20px;
+            transition:0.4s all ease-in-out;
+            &:hover {
+                color:$caramelColor;
+            }
+        }
+    }
+    .price_start {
+       
+        position:absolute;
+        bottom:15px;
+        right:30px;
+        span {
+            font-size:$subtitle;
+            color:$purewhiteColor;
+        }
+        p {
+            color:$purewhiteColor;
+        }
+    }
+}
+#overall_room {
+    width:100%;
+    height:100%;
+    background:$purewhiteColor;
+    @include flexbox(center,center,column);
+    .effective_room {
+        height:100%;
+        width:80%;
+        .header_container {
+            margin-top:20px;
+            width:100%;
+            height:20vh;
+            @include flexbox(flex-start,center,column);
+            p {
+                font-size:1vw;
+                margin:10px 0px;
+                i {
+                    color:$caramelColor;
+                }
+            }
+        }
+        .gallery_book_now_container {
+            width:100%;
+            height:100%;
+            @include flexbox(center,center,row);
+            .gallery_container {
+                width:70%;
+                height:65vh;
+                background:red;
+                position:relative;
+                @include flexbox(center,center,unset);
+                .gallery-hightlight {
+                    width: 100%;
+                    height: 100%;
+                  }
+                  .room-preview {
+                    display: flex;
+                    width: 30%;
+                    position:absolute;
+                    bottom:0;
+                  }
+                  .room-preview img {
+                    border: 2px solid $pureblackColor;
+                    flex-grow: 1;
+                    height: 40px;
+                    width:60px;
+                    opacity: 0.5;
+                    margin:5px 7px;
+                    transition: opacity 0.4s ease;
+                    cursor: pointer;
+                  }
+                  
+                  img.room-active {
+                    opacity: 1;
+                  }
+                    img {
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
+                    }
+            }
+            .book_now_rooms {
+                height:65vh;
+                width:30%;
+                margin-left:20px;
+                @include flexbox(center,flex-end,column);
+                form {
+                    width:100%;
+                    height:100%;
+                    background:#2c2c2c;
+                    input[type=date]::-webkit-inner-spin-button,
+                    input[type=date]::-webkit-outer-spin-button {
+                        background:$ironColor;
+                    }
+                    input[type=date]::-webkit-datetime-edit-month-field {
+                        color:$caramelColor;
+                        font-size:25px;
+                    }
+                    input[type=date]::-webkit-datetime-edit-day-field {
+                        color:$caramelColor;
+                        font-size:2vw;
+                    }
+                    input[type=date]::-webkit-calendar-picker-indicator {
+                        background:$caramelColor;
+                    }
+                    input[type=date]::-webkit-datetime-edit-text {
+                        color:$caramelColor;
+                    }
+                    input[type=date] {
+                        margin-top:15px;
+                        background:$ironColor;
+                        color:$purewhiteColor;
+                        width:80%;
+                        border:1px solid $pureblackColor;
+                    }
+                    
+                    @include flexbox(center,center,column);
+                    .book_now_information {
+                        background:#2c2c2c;
+                        width:90%;
+                        height:70%;
+                        @include flexbox(center,center,column);
+                        .book_now_alignment {
+                            @include flexbox(center,center,row);
+                            width:100%;
+                            height:50%;
+                            .book_now_info_container {
+                                margin:5px;
+                                background:$ironColor;
+                                width:45%;
+                                height:90%;
+                                @include flexbox(center,center,column);
+                                h5 {
+                                    color:$lightwhiteColor;
+                                }
+                                input[type=number]::-webkit-inner-spin-button,
+                                input[type=number]::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                }
+                                .number-input {
+                                    display: inline-flex;
+                                    @include flexbox(center,center,row);
+                                    width:50%;
+                                    height:50%;
+                                    a {
+                                        border: none;
+                                        cursor: pointer;
+                                        margin: 0;
+                                        position: relative;
+                                        
+                                        color:$lightgrey1;
+                                        font-size:1.7vw;
+                                        padding:0px 2vw;
+                                    } 
+                                    input[type=number] {
+                                        width: 3rem;
+                                        border: none;
+                                        font-size: $title03;
+                                        text-align: center;
+                                        background:$ironColor;
+                                        color:$caramelColor;
+                                    }
+                                    p {
+                                        font-size:$subtitle;
+                                        color:$ironColor;
+                                    }
+                                    .buttons {
+                                        @include flexbox(center,center,column);
+                                    }
+                                }       
+                            }
+                        }
+                        
+                    }
+                    .button {
+                        background-color: $caramelColor;
+                        color: white;
+                        padding: 10px 15px;
+                        margin: 8px 0;
+                        border: none;
+                        cursor: pointer;
+                        width: 100%;
+                      }   
+                      .button:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+        .room_description_best_rooms {
+            width:100%;
+            height:100%;
+            @include flexbox(center,center,row);
+            .room_description {
+                width:70%;
+                height:100%;
+                @include flexbox(center,center,column);
+                hr {
+                    width:100%;
+                    height:1px;
+                    border:1px solid #ededed;
+                }
+                p {
+                    margin:5px 0px;
+                }
+                h5 {
+                 
+                   margin-top:20px;
+                   margin-bottom:10px;
+                   color:$lightgrey2;
+                   font-size:$twoparagraph;
+                   align-self: flex-start;
+                }
+                .benefits_container {
+                    margin:20px 0px;
+                    width:100%;
+                    height:7vh;
+                    @include flexbox(center,center,row);
+                    .benefit_container{
+                        height:100%;
+                        width:30%;
+                        @include flexbox(center,center,column);
+                        a {
+                            color:$lightgrey1;
+                            margin:0;
+                        }
+                        p {
+                            color:$lightgrey1;
+                            margin:0;
+                            margin-top:10px;
+                        }
+                    }
+                }
+                .text_description {
+                    height:30vh;
+                    width:100%;
+                    p {
+                        margin:15px 0px;
+                        color:$lightgrey2;
+                    }
+                }
+               
+                #room_services {
+                    width:100%;
+                    height:25vh;
+                    margin-bottom: 15px;
+                    @include flexbox(flex-start,center,column);
+                    .services_container {
+                        @include flexbox(flex-start,flex-start,row);
+                        flex-wrap:wrap;
+                        a {
+                            margin:10px 15px 10px 0px;
+                            color:$lightgrey1;
+                        }
+                    }
+                }
+                 .check_availability {
+                    height:25vh;
+                    width:100%;
+                    margin-bottom: 10px;
+                    background:$purewhiteColor;
+                    @include flexbox(center,center,column);
+                    form {
+                        width:100%;
+                        height:100%;
+                        @include flexbox(center,center,row);
+                        .checkin_out{
+                            height:100%;
+                            width:35%;
+                             @include flexbox(center,center,column);
+                            p{
+                               
+                                color:$lightgrey2;
+                            }
+                            input[type=date] {
+                                width:70%;
+                                border:none;
+                                border:1px solid $lightgrey1;
+                                padding:7px;
+                            }
+                        }
+                        .book_now{
+                            background-color: $ironColor;
+                            color: white;
+                            padding: 10px 15px;
+                            margin: 8px 0;
+                            width:30%;
+                            border: none;
+                            cursor: pointer;
+                        }   
+                    }
+                }
+            }
+            .recommended_rooms {
+                width:30%;
+                height:100%;
+                margin-left:25px;
+                margin-top:50px;
+                @include flexbox(flex-start,center,column);
+                .block_of_room {
+                    width:100%;
+                    height: 25%;
+                    margin:30px 0px;
+                    @include flexbox(center,center,row);
+                    .image_container {
+                        height:100%;
+                        width: 50%;
+                        img {
+                            width:100%;
+                            height:100%;
+                            object-fit:cover;
+                        }
+                    }
+                    .details_container {
+                        width:50%;
+                        height:100%;
+                        margin-left:20px;
+                        @include flexbox(flex-start,center,column);
+                        h5{
+                            font-size:$navigation;
+                            color:$lightgrey3;
+                        }
+                        p {
+                            color:$lightgrey1;
+                        }
+                        .button {
+                            margin:10px 0px;
+                          
+                            a {
+                                @include button($caramelColor,none,$purewhiteColor,5px 2vw,unset);        
+                                &:hover {
+                                    opacity:0.9;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+     }
+}
+
+
+#similar_rooms {
+    background:#ededed;
+    width:100%;
+    height:125vh;
+    @include flexbox(center,center,column);
+    .blocks_container {
+        width:84%;
+        height:100%;
+        margin-bottom:40px;
+        @include flexbox(center,center,column);
+        .header_container {
+            align-self:flex-start;
+            margin-left:20px;
+            h4 {
+                margin-top:40px;
+            }
+            p:nth-child(2) {
+                font-size:1vw;
+                margin-top:15px;
+                margin-bottom:40px;
+                i {
+                    color:$caramelColor;
+                }
+            }
+        }
+        .blocks_alignment {
+            width:100%;
+            height:100%;
+            @include flexbox(center,center,row);
+            .block_content {
+                width:30%;
+                height:90vh;
+                background:$purewhiteColor;
+                margin:10px 20px;
+                position:relative;
+                @include flexbox(center,center,column);
+                .content_container {
+                    width:100%;
+                    height:60%;
+                    @include flexbox(center,center,column);
+                }
+                h5 {
+                    color:$ironColor;
+                }
+                .headofblock {
+                    width:100%;
+                    height:40%;
+                    position:relative;
+                    img {
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                    }
+                    p {
+                        position:absolute;
+                        bottom:10px;
+                        left:10px;
+                        z-index:4;
+                        color:$purewhiteColor;
+                        i {
+                            color:$caramelColor;
+                        }
+                    }
+                }
+                .headofblock::after {
+                    content:" ";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: inset 0px -40px 40px 0px rgba(0, 0, 0, .50);
+                    top: 0;
+                    left: 0;
+                    z-index:1;
+                }
+                .benefits_container {
+                    margin:20px 0px;
+                    width:100%;
+                
+                    @include flexbox(center,center,row);
+                    .benefit_container{
+                        margin:0px 10px;
+                        width:40%;
+                        @include flexbox(center,center,column);
+                        a {
+                            color:$lightgrey1;
+                            margin:0;
+                        }
+                        p {
+                            color:$lightgrey1;
+                            margin:0;
+                            margin-top:10px;
+                        }
+                    }
+                }
+                p {
+                    text-align:center;
+                    width:90%;
+                    color:$lightgrey2;
+                }
+                .button {
+                    margin-top:20px;
+                    a {
+                        @include button(none,1px solid $caramelColor,$caramelColor,7px 2vw,unset);                }
+                }
+            }
+        }
+    }
+}

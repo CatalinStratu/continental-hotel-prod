@@ -1,0 +1,163 @@
+#about_image_container {
+    height:50vh;
+    width:100%;
+    background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/about/background.jpg) center center;
+    background-attachment: fixed;
+    background-size:cover;
+    position: relative;
+    @include flexbox(center,center,column);
+    h3 {
+        color:$caramelColor;
+    }
+    p{
+        color:$purewhiteColor;
+    }
+}
+#about_intro {
+    width:100%;
+    height:40vh;
+    background:$purewhiteColor;
+    @include flexbox(center,center,column);
+    .alignment_container {
+        width:90%;
+        height:100%;
+        @include flexbox(center,center,row);
+        .header_container {
+            width:50%;
+            height:100%;
+            text-align:right;
+            h4 {
+                width:80%;
+                color:$ironColor;
+            }
+            @include flexbox(center,center,column);
+        }
+        .column_container {
+            width:25%;
+            height:100%;
+            @include flexbox(center,center,column);
+            p {
+                width:80%;
+                color:$lightgrey1;
+            }
+        }
+    }
+}
+#overall_about {
+    width:100%;
+    height:110vh;
+    @include flexbox(center,center,column);
+    .alignment_container {
+        width:85%;
+        height:90%;
+        @include flexbox(center,center,row);
+        .images_container {
+            width:70%;
+            height:100%;
+            @include flexbox(center,center,row);
+            .two_images {
+                width:55%;
+                height:90%;
+                @include flexbox(center,center,column);
+                .image_container {
+                    width:100%;
+                    height:48%;
+                    margin:10px 0px;
+                }
+            }
+            .one_image {
+                width:35%;
+                height:90%;
+                margin:20px 20px;
+            }
+        }
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            filter:brightness(2px);
+        }
+        .services_container {
+            width:30%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .alignment_container {
+                @include flexbox(center,center,column);
+                width:100%;
+                height:100%;
+                margin:0;
+                .one_services_container {
+                    height:30%;
+                    width:100%;
+                    margin:10px 0px;
+                    @include flexbox(center,center,row);
+                    h4 {
+                        color:$lightgrey2;
+                        margin-left:30px;
+                    }
+                    .upper_content {
+                        @include flexbox(flex-start,center,column);
+                    
+                        p {
+                           
+                            margin-left:20px;
+                            color:$lightgrey2;
+                        }
+                        .button {
+                            margin-top:5px;
+                            margin-left:20px;
+                            a {
+                                @include button($ironColor,none,$purewhiteColor,5px 1vw,unset);
+                            }
+                        }
+                    }
+                  
+                }
+            }
+            .button {
+                a {
+                    @include button($caramelColor,none,$purewhiteColor,7px 1vw,unset);
+                }
+            }
+        }
+               
+    }
+}
+#bloop_data {
+    width:100%;
+    height:65vh;
+    background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(255,255,255,0.2)),url(../images/about/bloop_data.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    @include flexbox(center,center,column);
+    .data_container {
+        width: 100%;
+        height: 30%;
+        @include flexbox(center,center,column);
+        h4 {
+            color:$purewhiteColor;
+            margin-bottom: 40px;
+            text-align: center;
+            width:90%;
+        }
+        .real_time_data {
+            width:100%;
+            height:40%;
+            @include flexbox(center,center,row);
+            .alignment_container {
+                @include flexbox(center,center,row);
+                .data {
+                    margin:10px 60px;
+                    h2 {
+                        color:$purewhiteColor;
+                    }
+                     p {
+                        color:$purewhiteColor;
+                     }
+                }
+            }
+           
+        }
+    }
+   
+}

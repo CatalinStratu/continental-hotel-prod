@@ -10,7 +10,7 @@
                 <h1>ENJOY A LUXURY</h1>
                 <h1> EXPERIENCE.</h1>
                 <div class="view_rooms">
-                    <a href="#">View Rooms</a>
+                    <a href="rentroom.html">View Rooms</a>
                 </div>
                 <hr>
                 <p>CONTINENTAL  LUXURY  HOTEL  &  BEST  RESORT</p>
@@ -41,33 +41,9 @@
                         cocktails.</p>
                 </div>
                 <div class="content_container">
-                    <div class="rent_room_container">
-                        <div class="upper_content">
-                            <h4>Search Rooms</h4>
-                            <p>START BOOKING NOW</p>
-                        </div>
-                        <div class="lower_content">
-                            <div class="checkin_out">
-                                <p>CHECK-IN</p>
-                                <p>CHECK-OUT</p>
-                            </div>
-                            <hr>
-                            <div class="date_picker">
-
-                            </div>
-                            <hr>
-                            <div class="guests">
-                                <div class="number-input">
-                                    <a class="fa fa-minus-square-o" onclick="upDown(1)"></a>
-                                    <input class="quantity" min="0" max="8" name="quantity" value="1" type="number">
-                                    <p>guest</p>
-                                    <a class="fa fa-plus-square-o" onclick="upDown(2)"></a>
-                                </div>
-                            </div>
-                            <div class="book_button">
-                                <a href="#">CHECK AVAILABILITY</a>
-                            </div>
-                        </div>
+                    <div class="container_header">
+                        <h2>book a room</h2>
+                        <h4>discover luxury life.</h4>
                     </div>
                 </div>
                 <div class="content_container_after">
@@ -89,18 +65,18 @@
                     service, our accommodation combines classic elegance with the
                     latest technology, to keep you comfortable and connected while travelling.</p>
                 <div class="button">
-                    <a href="/page/about.html">About Us</a>
+                    <a href="<?php echo e(route('about')); ?>">About Us</a>
                 </div>
             </div>
             <div class="content_container_after">
                 <div class="image1">
-                    <img src="assets/images/resort1.jpg" alt="resort1">
+                    <img src="assets/images/home/resort1.jpg" alt="resort1">
                 </div>
                 <div class="image2">
-                    <img src="assets/images/resort2.jpg" alt="resort2">
+                    <img src="assets/images/home/resort2.jpg" alt="resort2">
                 </div>
                 <div class="image3">
-                    <img src="assets/images/resort3.jpg" alt="resort3">
+                    <img src="assets/images/home/resort3.jpg" alt="resort3">
                 </div>
             </div>
         </section>
@@ -111,9 +87,10 @@
                 <h2>BEST ROOMS</h2>
             </div>
             <div class="rooms_container">
+
                 <div class="small_room">
                     <div class="upper_content">
-                        <img src="assets/images/room_small.jpeg" alt="room1">
+                        <img src="assets/images/home/room_small.jpeg" alt="room1">
                         <p>HOTEL CONTINENTAL <i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i></p>
                     </div>
                     <div class="lower_content">
@@ -126,27 +103,29 @@
                                 timber furniture with marble tops, your stay in Continental will be more than
                                 comfortable when you choose to stay with us.</p>
                             <div class="button">
-                                <a href="/page/rentroom.html">BOOK NOW FROM 50$</a>
+                                <a href="rentroom.html">BOOK NOW FROM 50$</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="four_rooms">
+
                     <div class="square">
-                        <img src="assets/images/room1.jpg" alt="room1">
-                        <p>FAMILY ROOM <a class="#">BOOK FROM 120$ </a></p>
+                        <img src="assets/images/home/room1.jpg" alt="room1">
+                        <p>FAMILY ROOM <a href="rentroom.html">BOOK FROM 120$ </a></p>
                     </div>
                     <div class="square">
-                        <img src="assets/images/room2.jpg" alt="room1">
-                        <p>DOUBLE ROOM <a class="#">BOOK FROM 130$ </a></p>
+                        <img src="assets/images/home/room2.jpg" alt="room1">
+                        <p>DOUBLE ROOM <a href="rentroom.html">BOOK FROM 130$ </a></p>
                     </div>
                     <div class="square">
-                        <img src="assets/images/room3.jpg" alt="room1">
-                        <p>LUXURY ROOM <a class="#">BOOK FROM 150$ </a></p>
+                        <img src="assets/images/home/room3.jpg" alt="room1">
+                        <p>LUXURY ROOM <a href="rentroom.html">BOOK FROM 150$ </a></p>
                     </div>
                     <div class="square">
-                        <img src="assets/images/room4.jpg" alt="room1">
-                        <p>APARTMENT <a class="#">BOOK FROM 130$ </a></p>
+                        <img src="assets/images/home/room4.jpg" alt="room1">
+                        <p>APARTMENT <a href="rentroom.html">BOOK FROM 130$ </a></p>
                     </div>
                 </div>
             </div>

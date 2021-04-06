@@ -6,39 +6,43 @@
     <title>Continental Hotel - welcome to our website.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=" <?php echo e(asset('assets/style/style.css')); ?>">
-    <link href="//db.onlinewebfonts.com/c/32441506567156636049eb850b53f02a?family=Times+New+Roman" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="<?php echo e(asset('assets/icons/font-awesome-4.7.0/css/font-awesome.min.css')); ?>">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/style/style.css')); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+    <link rel="icon" type="image/png" href="<?php echo e(asset('assets/images/favicon.png')); ?>"/>
 </head>
+
 <body>
 <section id="header">
     <div class="user_services">
         <div class="options">
-            <a class="fa fa-credit-card-alt" href="/page/information.html"> Payment Options</a>
-            <a class="fa fa-check-square-o" href="/page/information.html"> Terms & Conditions</a>
+            <a class="fa fa-credit-card-alt" href="information.html"> Payment Options</a>
+            <a class="fa fa-check-square-o" href="information.html"> Terms & Conditions</a>
         </div>
         <div class="client_area">
-            <a class="fa fa-envelope-o" href="/page/client.html"> My Bookings</a>
-            <a class="fa fa-pencil" href="/page/client.html"> Add Your Review</a>
+            <div class="my_settings">
+                <a class="fa fa-envelope-o" href="client.html"> My Bookings</a>
+            </div>
             <div class="auth_button">
                 <a class="fa fa-user-circle-o fa-2x"></a>
                 <?php if(Route::has('login')): ?>
-                        <?php if(auth()->guard()->check()): ?>
-                            <a href="<?php echo e(url('/dashboard')); ?>">My Account</a> /
-                            <form method="POST" action="<?php echo e(route('logout')); ?>">
-                                <?php echo csrf_field(); ?>
-                                <a href="<?php echo e(route('logout')); ?>"
-                                                       onclick="event.preventDefault();
+                    <?php if(auth()->guard()->check()): ?>
+                        <a href="<?php echo e(url('/dashboard')); ?>">My Account</a> /
+                        <form method="POST" action="<?php echo e(route('logout')); ?>">
+                            <?php echo csrf_field(); ?>
+                            <a href="<?php echo e(route('logout')); ?>"
+                               onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    <?php echo e(__('Logout')); ?>
+                                <?php echo e(__('Logout')); ?>
 
-                                </a>
+                            </a>
                         </form>
 
-                        <?php else: ?>
-                            <?php if(Route::has('register')): ?> <a href="<?php echo e(route('register')); ?>">Register</a> <?php endif; ?> /  <a href="<?php echo e(route('login')); ?>">Sign In</a>
-                        <?php endif; ?>
+                    <?php else: ?>
+                        <?php if(Route::has('register')): ?> <a href="<?php echo e(route('register')); ?>">Register</a> <?php endif; ?> /  <a
+                            href="<?php echo e(route('login')); ?>">Sign In</a>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>
@@ -48,14 +52,29 @@
             <a href="<?php echo e(route('index')); ?>"><img src="<?php echo e(asset('assets/images/logo.png')); ?>" alt="Continental"></a>
         </div>
         <div class="links">
-            <a href="<?php echo e(route('index')); ?>">Home</a>
-            <a href="/page/rentroom.html">Rooms</a>
-            <a href="/page/services.html">Services</a>
-            <a href="/page/about.html">About us</a>
-            <a href="/page/contact.html">Contact</a>
+            <a class="home" href="<?php echo e(route('index')); ?>">Home</a>
+            <a class="rooms" href="rentroom.html">Rooms</a>
+            <a class="services" href="services.html">Services</a>
+            <a class="about" href="<?php echo e(route('about')); ?>">About us</a>
+            <a class="contact" href="contact.html">Contact</a>
             <div class="book_button">
-                <a href="/page/rentroom.html">BOOK NOW</a>
+                <a href="rentroom.html">BOOK NOW</a>
             </div>
+        </div>
+        <div class="navigation">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="hamburger-menu">
+                <a class="home" href="index.html" onclick="toggleMenu()">Home</a>
+                <a class="rooms" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
+                <a class="services" href="services.html" onclick="toggleMenu()">Services</a>
+                <a class="about" href="<?php echo e(route('about')); ?>" onclick="toggleMenu()">About us</a>
+                <a class="contact" href="contact.html" onclick="toggleMenu()">Contact</a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -84,7 +103,8 @@
             <p>SUBSCRIBE FOR MORE OFFERS</p>
             <div class="button">
                 <form action="/newletter.php">
-                    <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email" name="email" required>
+                    <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email"
+                           name="email" required>
                     <input type="submit" value="SUBSCRIBE">
                 </form>
             </div>
@@ -93,17 +113,27 @@
     </div>
     <div class="lower_content">
         <div class="links">
-            <a href="<?php echo e(route('index')); ?>">Home</a>
-            <a href="/page/rentroom.html">Rooms</a>
-            <a href="/page/services.html">Services</a>
-            <a href="/page/about.html">About us</a>
-            <a href="/page/contact.html">Contact</a>
+            <a class="home" href="<?php echo e(route('index')); ?>">Home</a>
+            <a class="rooms" href="rentroom.html">Rooms</a>
+            <a class="services" href="services.html">Services</a>
+            <a class="about" href="<?php echo e(route('about')); ?>">About us</a>
+            <a class="contact" href="contact.html">Contact</a>
+        </div>
+        <div class="copyright">
+            <p>Continental Hotel © 2021. All Rights Reserved. </p>
         </div>
     </div>
 </section>
+<div id="preloader">
+    <span>↓</span>
+    <span style="--delay: 0.1s">↓</span>
+    <span style="--delay: 0.3s">↓</span>
+    <span style="--delay: 0.4s">↓</span>
+    <span style="--delay: 0.5s">↓</span>
+</div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="<?php echo e(asset('assets/js/main.js ')); ?>" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="<?php echo e(asset('assets/js/main.js')); ?>" async defer></script>
 </html>
 <?php /**PATH C:\Users\user\openserver\OSPanel\domains\hotel.com\resources\views/layouts/app.blade.php ENDPATH**/ ?>

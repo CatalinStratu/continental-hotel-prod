@@ -14,35 +14,45 @@
 }
 
 #auth_container,#auth_container_two {
-    height:130vh;
+    height:100%;
     width:100%;
-    position: relative;
+    position:relative;
     @include flexbox(center,flex-end,row);
     .svg_container,.svg_container_two {
-        position: absolute;
-        left:2vw;
-        width:55%;
-        height:70%;
+        width:60vw;
+        height:70vw;
         background:url(../images/authreg/background.svg) center no-repeat;
-        background-size:95%;
-        z-index:4;
+        background-size:90%;
+        position: inherit;
+        z-index:7;
     }
     .svg_container_two {
         background:url(../images/authreg/background2.svg) center no-repeat;
-        background-size:95%;
-        width:50%;
-        height:95%;
+        background-size:90%;
+        width:60vw;
+        height:70vw;
     }
     .details_container {
-        width:33%;
-        margin:0px 10vw;
+        width:40vw;
+        margin:40px 10vw;
         height:100%;
         position: inherit;
         z-index:7;
         @include flexbox(center,center,column);
-        h4 {
-            margin-bottom:20px;
+        h5 {
+            margin:20px 0px;
         }
+        .fa-facebook-official{
+            font-size:$threesubtitle;
+            &:hover {
+                opacity:0.8;
+            }
+        }
+        a{
+            color: dodgerblue;
+            font-size:$link;
+        }
+       
         input[type=text], input[type=password] {
             width: 100%;
             padding: 15px;
@@ -67,13 +77,16 @@
             border: none;
             cursor: pointer;
             width: 100%;
-            opacity: 0.9;
           }   
           .registerbtn:hover {
-            opacity:1;
+            opacity: 0.9;
           }
-          a {
-            color: dodgerblue;
+          .signin {
+            a {
+                font-size:$link;
+                color: dodgerblue;
+            }
           }
+         
     }
 }
