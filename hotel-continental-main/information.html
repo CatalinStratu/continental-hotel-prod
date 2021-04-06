@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Continental Hotel - welcome to our website.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    </head>
+    <body>
+        <section id="header">
+            <div class="user_services">
+                <div class="options">
+                    <a class="fa fa-credit-card-alt" href="information.html"> Payment Options</a>
+                    <a class="fa fa-check-square-o" href="information.html"> Terms & Conditions</a>
+                </div>
+                <div class="client_area">
+                    <div class="my_settings">
+                        <a class="fa fa-envelope-o" href="client.html"> My Bookings</a>
+                        <a class="fa fa-pencil" href="client.html"> Add Your Review</a>
+                    </div>
+                    <div class="auth_button">
+                        <a class="fa fa-user-circle-o fa-2x"></a>
+                        <a href="register.html">Register</a> / <a href="signin.html">Sign In</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user_navigation">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="Continental"></a>
+                </div>
+                <div class="links">
+                    <a class="home" href="index.html">Home</a>
+                    <a class="rooms" href="rentroom.html">Rooms</a>
+                    <a class="services" href="services.html">Services</a>
+                    <a class="about" href="about.html">About us</a>
+                    <a class="contact" href="contact.html">Contact</a>
+                    <div class="book_button">
+                        <a href="rentroom.html">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <div class="hamburger-menu">
+                        <a class="home" href="index.html" onclick="toggleMenu()">Home</a>
+                        <a class="rooms" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
+                        <a class="services" href="services.html" onclick="toggleMenu()">Services</a>
+                        <a class="about" href="about.html" onclick="toggleMenu()">About us</a>
+                        <a class="contact" href="contact.html" onclick="toggleMenu()">Contact</a> 
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <div id="image_container">
+            <h3>All our Services in one offer</h3>
+            <p>We keep people together and things simple.</p>
+        </div>
+        <section id="overall_services">
+
+        </section>        
+        <section id="footer">
+            <div class="upper_content">
+                <div class="data_container">
+                    <h4>Phone Support</h4> 
+                    <p>24 HOURS A DAY</p>
+                    <h5>+(40)799387932</h5>
+                </div>
+                <div class="data_container">
+                    <h4>Follow us</h4> 
+                    <p>SOCIAL MEDIA ACCOUNTS</p>
+                    <div class="social_media">
+                        <a href="#" class="fa fa-youtube-play"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-facebook-official"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                    
+                </div>
+                <div class="data_container">
+                    <h4>Our Newsletter</h4> 
+                    <p>SUBSCRIBE FOR MORE OFFERS</p>
+                    <div class="button">
+                        <form action="/newletter.php">
+                            <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email" name="email" required>
+                            <input type="submit" value="SUBSCRIBE">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="lower_content">
+                <div class="links">
+                    <a class="home" href="index.html">Home</a>
+                    <a class="rooms" href="rentroom.html">Rooms</a>
+                    <a class="services" href="services.html">Services</a>
+                    <a class="about" href="about.html">About us</a>
+                    <a class="contact" href="contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    <p>Continental Hotel © 2021. All Rights Reserved. </p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js" async defer></script>
+</html>

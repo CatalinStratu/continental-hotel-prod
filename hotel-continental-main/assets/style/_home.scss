@@ -1,8 +1,8 @@
 #hero {
-    height: 71vh;
+    height: calc(100vh - 156px - 50px);
     width: 100vw;
     position: relative;
-    background:url(../images/hero.jpg) center center;
+    background:url(../images/home/hero.jpg) center center;
     background-attachment: fixed;
     background-size:cover;
     z-index:0;
@@ -51,7 +51,7 @@
     z-index:1;
 }
 #lower_content {
-    height:10vh;
+    height:78px;
     width:100%;
     background-color:$ironColor;
     position: relative;
@@ -96,7 +96,7 @@
     .room_background {
         height:80vh;
         width:90vw;
-        background:url(../images/rentroom.jpg);
+        background:url(../images/home/rentroom.jpg);
         background-attachment: fixed;
         background-size:cover;
         position:relative;
@@ -163,88 +163,15 @@
             width:33%;
             height:100%;
             @include flexbox(center,center,column);
-            .rent_room_container {
-                height:85%;
-                width:90%;
-                background:$purewhiteColor;
-                position:inherit;
+            .container_header {
+                text-align: center;
+                position: inherit;
                 z-index:4;
-                .upper_content {
-                    width:100%;
-                    height:25%;
-                    background:$caramelColor;
-                    @include flexbox(center,center,column);
-                    h4{
-                        color:$purewhiteColor;
-                    }
-                    p{
-                        
-                        color:$purewhiteColor;
-                    }
-                }
-                .lower_content {
-                    @include flexbox(center,center,column);
-                    hr {
-                        width:85%;
-                        height:1px;
-                        background:$lightgrey1;
-                    }
-                    .checkin_out{
-                        height:10vh;
-                        width:100%;
-                        @include flexbox(flex-end,center,row);
-                        p{
-                            padding:0px 40px 5px 40px;
-                            color:$lightgrey2;
-                        }
-                    }
-                    .date_picker {
-                        height:15vh;
-                        width:100%;
-                        position: inherit;
-                        z-index:8;
-                       
-                    }
-                    .guests {
-                        height:12vh;
-                        width:100%;
-                        input[type=number]::-webkit-inner-spin-button,
-                        input[type=number]::-webkit-outer-spin-button {
-                            -webkit-appearance: none;
-                        }
-                        .number-input {
-                            display: inline-flex;
-                            @include flexbox(center,center,row);
-                            width:100%;
-                            height:100%;
-                            a {
-                                border: none;
-                                cursor: pointer;
-                                margin: 0;
-                                position: relative;
-                                color:$lightgrey1;
-                                font-size:1.7vw;
-                                padding:0px 50px;
-                            } 
-                            input[type=number] {
-                                font-family: sans-serif;
-                                width: 3rem;
-                                border: none;
-                                font-size: 2rem;
-                                font-weight: bold;
-                                text-align: center;
-                            }
-                            p {
-                                font-size:$subtitle;
-                                color:$lightgrey3;
-                            }
-                        }       
-                    }
-                    .book_button {
-                        a {
-                        @include button($caramelColor,none,$purewhiteColor,10px 90px,unset);
-                       }
-                    }
+                padding:20px;
+                border:1px solid $purewhiteColor;
+                background: rgba(255,255,255,0.1);
+                h2,h4 {
+                    color:$caramelColor;
                 }
             }
         }
@@ -414,7 +341,7 @@
                     }
                     .button {
                         margin-top:10px;
-                        width:45%;
+                        width:50%;
                         a {
                             margin-top:0px;
                             font-size:$link;
@@ -439,6 +366,7 @@
                 background:red;
                 margin:4px;
                 position:relative;
+                cursor:pointer;
                 p {
                     position:absolute;
                     bottom:10px;
@@ -448,6 +376,8 @@
                     a {
                         padding:1px;
                         background:$caramelColor;
+                        color:$purewhiteColor;
+                        text-decoration: none;
                     }
                 }
             }
@@ -468,81 +398,5 @@
             
         }
        
-    }
-}
-#footer {
-    width:100%;
-    height:45vh;
-    background:$ironColor;
-    .upper_content {
-        height:70%;
-        width:100%;
-        background:#2c2c2c;
-        @include flexbox(center,center,row);
-        .data_container {
-            height:100%;
-            width:30%;
-            @include flexbox(flex-start,center,column);
-            h4 {
-                color:$purewhiteColor;
-            }
-            p {
-                color:$lightgrey1;
-            }
-            h5 {
-                margin-top:40px;
-                color:$purewhiteColor;
-            }
-            .social_media {
-                margin-top:40px;
-                a {
-                    font-size:2vw;
-                    margin:0px 10px;
-                    color:$lightwhiteColor;
-                }
-            }
-            .button {
-                margin-top:40px;
-                form {
-                    @include flexbox(center,center,row);
-                }
-                input[type=email] {
-                    @include button($ironColor,none,$purewhiteColor,7px 15px , unset);
-                    border:none;
-                }
-                input[type=submit] {
-                    @include button($caramelColor,none,$purewhiteColor,7px 15px , unset);
-                    border:none;
-                    &:hover {
-                        cursor:pointer;
-
-                    }
-                }
-                ::placeholder{
-                    color:$lightgrey1;
-                }
-            }
-        }
-    }
-    .lower_content {
-        height:30%;
-        width:100%;
-        background:$ironColor;
-        position:relative;
-        @include flexbox(center,center,row);
-        .links {
-            position:absolute;
-            left:4vw;
-            @include flexbox(flex-start,center,row);
-            a {
-                margin:0px 30px;
-                font-size:$navigation;
-                color:$lightgrey1;
-                transition:0.4s all ease-in-out;
-                &:hover {
-                    color:$purewhiteColor;
-                }
-            }
-        }
     }
 }

@@ -1,0 +1,1925 @@
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+    #header {
+        .user_services { 
+
+            .options {
+                display:none;
+            }
+           
+            a {
+                font-size:$twolink;
+            }
+        }
+        .user_navigation {
+
+            .links {
+                display:none;
+            }
+            .navigation {
+                display:inline-flex;
+            }
+            .navigation a {
+                font-size:3.2vw;
+            }
+             .navigation .hamburger-menu{
+                width:60%;
+            }
+             .navigation .hamburger-menu a{
+                font-size:4.5vw;
+            }
+        }
+    }
+    #footer {
+        height:90vh;
+        .upper_content {
+            height:80%;
+            flex-direction: column;
+            .data_container {
+                height:100%;
+                width:unset;
+                margin: 0px;
+                width:100%;
+                border-bottom:1px solid $ironColor;
+                @include flexbox(center,center,column);
+                h4{
+                    font-size:$twonavigation;
+                }
+                p {
+                    color:$lightgrey1;
+                }
+                h5 {
+                    margin-top:20px;
+                    font-size:$twoparagraph;
+                }
+                .social_media {
+                    margin-top:20px;
+                    a {
+                        font-size:$twosubtitle;
+                        color:$lightwhiteColor;
+                    }
+                }
+                .button {
+                    margin-top:20px;
+                    width:100%;
+                    @include flexbox(center,center,column);
+                }
+            }
+        }
+        .lower_content {
+            height:20%;
+            flex-direction:column;
+            .links {
+                position:relative;
+                left:unset;
+                a {
+                    margin:0px 15px;
+                    font-size:$twonavigation;
+                }
+            }
+            .copyright {
+                position: relative;
+                right:unset;
+                @include flexbox(center,center,column);
+                margin-top:20px;
+                p {
+                    font-size:$threeparagraph;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #header {
+        .user_services { 
+
+            .options {
+                display:none;
+            }
+            .client_area {
+
+                .auth_button {
+
+                    a:nth-child(1) {
+                        font-size:$threesubtitle;
+                    } 
+                    a {
+                        font-size:$threelink;
+                    }
+                }
+            }
+            .client_area {
+                .my_settings {
+                    a:nth-child(2) {
+                        display:none;
+                 }
+                }
+            }
+            a {
+                font-size:$threelink;
+            }
+        }
+        .user_navigation {
+
+            .links {
+                display:none;
+            }
+            .navigation {
+                display:inline-flex;
+            }
+            .navigation a {
+                font-size:3.2vw;
+            }
+             .navigation .hamburger-menu{
+                width:60%;
+            }
+             .navigation .hamburger-menu a{
+                font-size:4.5vw;
+            }
+        }
+    }
+    #footer {
+        height:140vh;
+        .upper_content {
+            height:55%;
+            flex-direction: column;
+            .data_container {
+                height:100%;
+                width:unset;
+                margin: 0px 20px;
+                width:100%;
+                border-bottom:1px solid $ironColor;
+                @include flexbox(center,center,column);
+                h4{
+                    font-size:$twonavigation;
+                }
+                p {
+                    color:$lightgrey1;
+                }
+                h5 {
+                    margin-top:20px;
+                    font-size:$twoparagraph;
+                }
+                .social_media {
+                    margin-top:20px;
+                    a {
+                        font-size:$twosubtitle;
+                        color:$lightwhiteColor;
+                    }
+                }
+                .button {
+                    margin-top:20px;
+                    width:100%;
+                    @include flexbox(center,center,column);
+                }
+            }
+        }
+        .lower_content {
+            height:45%;
+            flex-direction: column;
+            .links {
+                position:relative;
+                left:unset;
+                @include flexbox(center,center,column);
+                a {
+                    margin:15px 5px;
+                    font-size:$threenavigation;
+                }
+            }
+            .copyright {
+                position: relative;
+                right:unset;
+                @include flexbox(center,center,column);
+                margin-top:30px;
+                p {
+                    font-size:$threeparagraph;
+                }
+            }
+        }
+    }
+}
+
+
+// register / sign in 
+
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #user_container { 
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/authreg/auth.jpg);
+        background-size:cover;
+    }
+    #auth_container,#auth_container_two { 
+        @include flexbox(center,center,column);
+        .details_container {    
+            width:90%;
+            a{
+                font-size:$threelink;
+            }
+            .signin {
+                a {
+                    font-size:$threelink;
+                }
+            }
+        }
+        .svg_container {
+            margin-top:30px;
+            width:90vw;
+            height:70vw;
+        }
+        .svg_container_two {
+            margin-top:30px;
+            width:90vw;
+            height:80vw;
+        }
+    }
+}
+//end of sign in /register
+
+// home 
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+
+    #hero { 
+        background:url(../images/home/hero.jpg);
+        background-position: center;
+        background-size:cover;
+        .view_rooms {
+            a {
+                @include button(none,1px solid $purewhiteColor,$purewhiteColor,10px 25px,unset);
+                font-size:$twolink;
+                &:hover {
+                   border-color:$caramelColor;
+                   color:$caramelColor; 
+                }
+            }
+        }
+    }
+    #lower_content {
+        .adress {
+            left:1vw;
+        }
+        .email {
+            right:1vw;
+        }
+    }
+    #rent_room{
+        height:100%;
+        margin-bottom:30px;
+        background:linear-gradient(90deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/home/rentroom.jpg); 
+        background-position: center;
+        background-size:cover;
+        .room_background { 
+            height:75vh;
+            width:100vw;
+        }
+
+    }
+    #relax_resort {
+        height:90vh;
+    }
+    #best_rooms {
+        height:230vh;
+        .title_container {
+            width:100%;
+            height:15%;
+        }
+        .rooms_container {
+            @include flexbox(center,center,column);
+            height:80%;
+            .small_room {   
+                width:100%;  
+                position:inherit;
+                top:unset;
+                left:unset;    
+                .upper_content {
+                    height:50%;
+                }
+                .lower_content {
+                    height:50%;
+                    .content_alignment {
+                        span {
+                            color:$lightgrey2;
+                            font-size:$twolink;
+                        }
+                        p{
+                            margin-top:15px;
+                            color:$lightgrey1;
+                            width:95%;
+                            font-size:$twoparagraph;
+                        }
+                        a {
+                            margin-top:5px;
+                            color:$lightgrey2;
+                            font-size:$twosubtitle;
+                        }
+                        .button {
+                            margin-top:10px;
+                            width:50%;
+                            a {
+                                margin-top:0px;
+                                font-size:$threelink;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+            .four_rooms {
+                position:inherit;
+                top:unset;
+                right:unset;
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,row);
+                flex-wrap: wrap;
+                .square {
+                    width:45%;
+                    height:49.5%;
+                    background:red;
+                    margin:4px;
+                    position:relative;
+                    p {
+                        position:absolute;
+                        bottom:10px;
+                        left:20px;
+                        color:$purewhiteColor;
+                        z-index:7;
+                        a {
+                            padding:1px;
+                            background:$caramelColor;
+                        }
+                    }
+                }
+                .square::after {
+                    content: " ";
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    box-shadow: inset 0px -50px 40px 0px rgba(0, 0, 0, .70);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #hero { 
+        background:url(../images/home/hero.jpg);
+        background-position: center;
+        background-size:cover;
+        .view_rooms {
+            a {
+                @include button(none,1px solid $purewhiteColor,$purewhiteColor,10px 25px,unset);
+                font-size:$threelink;
+                &:hover {
+                   border-color:$caramelColor;
+                   color:$caramelColor; 
+                }
+            }
+        }
+    }
+    #lower_content {
+        .adress {
+            display:none;
+        }
+        .email {
+            display:none;
+        }
+    }
+    #rent_room{
+        height:100%;
+        margin-bottom:30px;
+        .room_background { 
+            height:120vh;
+            width:100vw;
+            background:linear-gradient(90deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/home/rentroom.jpg); 
+            background-position: center;
+            background-size:cover;
+            @include flexbox(center,center,column);
+            .content_container_before {
+                width:90%;
+                height:30%;
+                h1:nth-child(2){
+                    padding-bottom:20px;
+                }
+                h5 {
+                    padding-bottom:20px;
+                }
+            }
+            .content_container_after {
+                width:90%;
+                height:30%;
+                h3:nth-child(2){
+                    padding-bottom:20px;
+                }
+                h5 {
+                    padding-bottom:20px;
+                }
+                span {
+                    font-size:$threeparagraph;
+                }
+            }
+            .content_container {
+                width:90%;
+                height:30%;
+            }
+        }
+
+        .room_background::after {
+            content:" ";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0px -200px 150px 50px rgba(0, 0, 0, .90);
+            top: 0;
+            left: 0;
+            z-index:1;
+        }
+
+    }
+    #relax_resort {
+        height:200vw;
+        @include flexbox(center,center,column-reverse);
+        .content_container_before{
+            width:90%;
+            height:50%;
+            margin-bottom: 20px;
+        }
+        .content_container_after {
+            width:90%;
+            height:50%;
+            .image1 {
+                width:45vw;
+                height:60vw;
+                top:0;
+                right:5vw;
+                z-index:6;
+            }
+            .image2 {
+                width:70vw;
+                height:38.75vw;
+                z-index:8;
+                top:57vw;
+                right:16vw;
+            }
+            .image3 {
+                position:absolute;
+                width:42.5vw;
+                height:50vw;
+                top:10vh;
+                right:25vw;
+            }
+        }
+    }
+    #best_rooms {
+        height:100%;
+        .title_container {
+            width:100%;
+            height:30vh;
+        }
+        .rooms_container {
+            @include flexbox(center,center,column);
+            .small_room {   
+                width:100%;  
+                position:inherit;
+                top:unset;
+                left:unset;    
+                height: 120vh;
+                .upper_content {
+                    height:50%;
+                }
+                .lower_content {
+                    height:50%;
+                    @include flexbox(center,center,column);
+                    .content_alignment {
+                        top:unset;
+                        span {
+                            color:$lightgrey2;
+                            font-size:$twolink;
+                        }
+                        p{
+                            margin-top:15px;
+                            width:95%;
+                            color:$lightgrey1;
+                            font-size:$twoparagraph;
+                        }
+                        a {
+                            margin-top:5px;
+                            color:$lightgrey2;
+                            font-size:$twosubtitle;
+                        }
+                        .button {
+                            margin-top:10px;
+                            width:80%;
+                            a {
+                                margin-top:0px;
+                                font-size:$threelink;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+            .four_rooms {
+                position:inherit;
+                top:unset;
+                right:unset;
+                width:100%;
+                height:150vh;
+                @include flexbox(center,center,column);
+                flex-wrap: nowrap;
+                margin:20px 0px;
+                .square {
+                    width:90%;
+                    height:24%;
+                    background:red;
+                    margin:4px;
+                    position:relative;
+                    p {
+                        position:absolute;
+                        bottom:10px;
+                        left:20px;
+                        color:$purewhiteColor;
+                        z-index:7;
+                        a {
+                            padding:1px;
+                            background:$caramelColor;
+                        }
+                    }
+                }
+                .square::after {
+                    content: " ";
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    box-shadow: inset 0px -50px 40px 0px rgba(0, 0, 0, .70);
+                }
+            }
+        }
+    }
+}
+//end of home
+
+//contact us 
+@media screen and (min-width: 500px) and (max-width:900px) {
+    #contact_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/contact/background.jpg);
+        background-position: center;
+        background-size:cover;
+    }
+    
+    #overall_contact_details {
+        .text_container {
+            height:35vh;
+            .col {
+                width:40%;
+                height:100%;
+                margin-left:50px;
+                @include flexbox(center,flex-start,column);
+                .col_row {
+                    width:80%;
+                    margin-right:0;
+                    margin-top:25px;
+                }
+            }
+            h5 {
+                font-size:$threenavigation;
+            }
+            p {
+                font-size:$threelink;
+            }
+            .col_2 {
+                width:40%;
+                height:100%;
+                @include flexbox(flex-start,flex-start,column);
+                .col_row {
+                    width:80%;
+                    margin-top:25px;
+                    margin-right:0;
+                }
+            }
+        }
+        
+        .big_container{
+            height:100%;
+            @include flexbox(center,center,column);
+            .frequently_container {
+                width:90%;
+                height:75vh;
+                a{
+                    font-size:$twonavigation;
+                }
+                span {
+                    color:$lightgrey1;
+                    font-size:$twoparagraph;
+                }
+            }
+            .quickmessage_container {
+                width:90%;
+                height:75vh;    
+                margin-left:0;
+                margin-bottom:50px;
+                input[type=text], select {
+                    width:100%; 
+                }
+                textarea {
+                    width:100%;
+                }
+                input[type=submit] {
+                    font-size:$twolink;
+                }
+
+            }
+        
+        }
+    }
+}
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #contact_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/contact/background.jpg);
+        background-position: center;
+        background-size:cover;
+    }
+    #overall_contact_details {
+        .text_container {
+            height:60vh;
+            @include flexbox(center,center,column);
+            .col {
+                width:90%;
+                height:100%;
+                margin:10px 0px;
+                @include flexbox(center,center,column);
+                .col_row {
+                    @include flexbox(center,center,column);
+                    width:100%;
+                    margin-right:0;
+                    margin-top:25px;
+                }
+            }
+            h5 {
+                font-size:$threenavigation;
+            }
+            p {
+                font-size:$threelink;
+               
+            }
+            .col_2 {
+                width:90%;
+                height:100%;
+                margin:10px 0px;
+                @include flexbox(center,center,column);
+                .col_row {
+                    @include flexbox(center,center,column);
+                    width:100%;
+                    margin-top:25px;
+                    margin-right:0;
+                }
+            }
+        }
+        
+        .big_container{
+            height:100%;
+            @include flexbox(center,center,column);
+            .frequently_container {
+                width:90%;
+                height:100%;
+                margin: 25px 0px;
+                a{
+                    font-size:$twonavigation;
+                }
+                span {
+                    color:$lightgrey1;
+                    font-size:$twoparagraph;
+                }
+            }
+            .quickmessage_container {
+                width:90%;
+                height:100%;    
+                margin-left:0;
+                margin:25px 0px;
+                input[type=text], select {
+                    width:100%; 
+                }
+                textarea {
+                    width:100%;
+                }
+                input[type=submit] {
+                    font-size:$twolink;
+                }
+
+            }
+        
+        }
+        .bloop_maps {
+            background:linear-gradient(90deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/contact/bloop_maps.jpg);
+            background-position: center;
+            background-size:cover;
+            h5 {
+                width:85%;
+            }
+         }    
+    }
+}
+//end of contact us
+
+
+//about us
+@media screen and (min-width: 500px) and (max-width:900px) {
+    #about_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/about/background.jpg);
+        background-position: center;
+        background-size:cover;
+    }
+    #about_intro {
+        width:100%;
+        height:75vh;
+        background:$purewhiteColor;
+        .alignment_container {
+            .header_container {
+                width:40%;
+            }
+            .column_container {
+                width:30%;
+            }
+        }
+    }
+    #overall_about {
+        width:100%;
+        height:100%;
+        @include flexbox(center,center,column);
+        .alignment_container {
+            width:90%;
+            height:90%;
+            @include flexbox(center,center,column);
+            .images_container {
+                width:100%;
+                height:80vh;
+                @include flexbox(center,center,row);
+                .two_images {
+                    width:55%;
+                    height:100%;
+                    @include flexbox(center,center,column);
+                    .image_container {
+                        width:100%;
+                        height:48%;
+                    }
+                }
+                .one_image {
+                    width:45%;
+                    height:100%;
+                }
+            }
+            .services_container {
+                width:100%;
+                height:75vh;
+                @include flexbox(center,center,column);
+                .alignment_container {
+                    width:100%;
+                    height:80%;
+                    @include flexbox(center,center,row);
+                    .one_services_container {
+                        height:100%;
+                        width:33.3%;
+                        @include flexbox(center,center,column);
+                        h4 {
+                            color:$lightgrey2;
+                            margin-left:0px;
+                            margin-bottom:10px;
+                        }
+                        .upper_content {
+                            @include flexbox(flex-start,center,column);
+                            p {
+                            
+                                margin-left:20px;
+                                color:$lightgrey2;
+                                margin-bottom:10px;
+                            }
+                            .button {
+                                margin-top:5px;
+                                margin-left:0x;
+                                width:90%;
+                                a {
+                                    @include button($ironColor,none,$purewhiteColor,5px 1vw,unset);
+                                }
+                            }
+                        }
+                    }
+                }
+                .button {
+                    width:50%;
+                    a {
+                        @include button($caramelColor,none,$purewhiteColor,7px 1vw,unset);
+                    }
+                }
+            }
+                   
+        }
+    }
+    #bloop_data {
+        width:100%;
+        height:65vh;
+        background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(255,255,255,0.2)),url(../images/about/bloop_data.jpg);
+        background-attachment: fixed;
+        background-size:cover;
+        @include flexbox(center,center,column);
+        .data_container {
+            width: 100%;
+            height: 30%;
+            @include flexbox(center,center,column);
+            h4 {
+                color:$purewhiteColor;
+                margin-bottom: 40px;
+            }
+            .real_time_data {
+                width:80%;
+                height:40%;
+                @include flexbox(center,center,row);
+                .data {
+
+                    margin:10px 25px;
+                    h2 {
+                        color:$purewhiteColor;
+                    }
+                     p {
+                        color:$purewhiteColor;
+                     }
+                }
+            }
+        }
+       
+    }
+}
+
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #about_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/about/background.jpg);
+        background-position: center;
+        background-size:cover;
+        .alignment_container {
+            width:90%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .header_container {
+                width:50%;
+                height:100%;
+                text-align:right;
+                h4 {
+                    width:80%;
+                    color:$ironColor;
+                }
+                @include flexbox(center,center,column);
+            }
+            .column_container {
+                width:25%;
+                height:100%;
+                @include flexbox(center,center,column);
+                p {
+                    width:80%;
+                    color:$lightgrey1;
+                }
+            }
+        }
+    }
+    #about_intro {
+        width:100%;
+        height:70vh;
+        background:$purewhiteColor;
+        .alignment_container {
+            width:90%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .header_container {
+                width:100%;
+                height:100%;
+                text-align:right;
+                h4 {
+                    width:80%;
+                    color:$ironColor;
+                }
+                @include flexbox(center,center,column);
+            }
+            .column_container {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                p {
+                    width:80%;
+                    color:$lightgrey1;
+                }
+            }
+        }
+    }
+    #overall_about {
+        width:100%;
+        height:100%;
+        @include flexbox(center,center,column);
+        .alignment_container {
+            width:100%;
+            height:90%;
+            @include flexbox(center,center,column);
+            .images_container {
+                width:100%;
+                height:80vh;
+                @include flexbox(center,center,row);
+                .two_images {
+                    width:50%;
+                    height:100%;
+                    @include flexbox(center,center,column);
+                    .image_container {
+                        width:100%;
+                        height:50%;
+                        margin:0;
+                    }
+                }
+                .one_image {
+                    width:50%;
+                    height:100%;
+                    margin:0;
+                }
+            }
+            .services_container {
+                width:100%;
+                height:130vh;
+                @include flexbox(center,center,column);
+                .alignment_container {
+                    width:100%;
+                    height:85%;
+                    @include flexbox(center,center,column);
+                    .one_services_container {
+                        height:100%;
+                        width:100%;
+                        @include flexbox(center,center,column);
+                        margin-bottom: 30px;
+                        h4 {
+                            color:$lightgrey2;
+                            margin-left:0px;
+                            margin-bottom:10px;
+                        }
+                        .upper_content {
+                            @include flexbox(flex-start,center,column);
+                            p {
+                            
+                                margin-left:20px;
+                                color:$lightgrey2;
+                                margin-bottom:10px;
+                            }
+                            .button {
+                                margin-top:5px;
+                                margin-left:0x;
+                                width:90%;
+                                a {
+                                    @include button($ironColor,none,$purewhiteColor,5px 1vw,unset);
+                                }
+                            }
+                        }
+                    }
+                }
+                .button {
+                    width:50%;
+                    a {
+                        @include button($caramelColor,none,$purewhiteColor,7px 1vw,unset);
+                    }
+                }
+            }
+                
+        }
+    }
+    #bloop_data {
+        width:100%;
+        height:80vh;
+        background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(255,255,255,0.2)),url(../images/about/bloop_data.jpg);
+        background-position: center;
+        background-size:cover;
+        @include flexbox(center,center,column);
+        .data_container {
+            @include flexbox(center,center,column);
+            height:unset;
+            h4 {
+                margin-bottom:5px;
+            }
+            .real_time_data {
+                height:100%;
+                margin-top:20px;
+                @include flexbox(center,center,column);
+                .alignment_container {
+                    margin:20px 0px;
+                    .data {
+                        margin:10px 20px;
+                        h2 {
+                            color:$purewhiteColor;
+                            text-align: center;
+                        }
+                         p {
+                            color:$purewhiteColor;
+                         }
+                    }
+                }
+               
+            }
+        }
+       
+    }
+}
+
+//end of about us
+
+//services 
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+    #image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/services/background.jpg);
+        background-position: center;
+        background-size:cover;
+    }
+    #heading {
+        h2 {
+            margin-top:40px;
+            margin-left:2vw;
+        }
+        p{
+            margin-top:5px;
+            margin-left:2vw;
+            font-size:$link;
+        }
+    }
+    #overall_services {
+        height:110vh;
+        width:100%;
+        background:$purewhiteColor;
+        margin-bottom:20px 0px;
+        @include flexbox(center,center,row);
+        .block_column_image {
+            width:32vw;
+            height:90vh;
+            position: relative;
+            margin: 0 10px;
+            .content_column {
+                width:90%;
+                height:60%;
+                @include flexbox(center,center,column);
+                margin:10px 0px;
+                background:rgba(255,255,255,0.95);
+                h4 {
+                    margin:10px 0px;
+                    color:$ironColor;
+                    font-size:$threesubtitle;
+                }
+                hr {
+                    width:20%;
+                    height:1px;
+                    margin:5px 0px;
+                    background:#ededed;
+                }
+                p{
+                    margin:5px 0px;
+                    text-indent: 5px;
+                    color:$lightgrey3;
+                    font-size:11px;
+                    width:85%;
+                }
+                .button {
+                    margin:20px 0px;
+                    width:90%;
+                    a {
+                        @include button(none,1px solid $lightgrey2,$lightgrey2,7px 15px,none);
+                        font-size:12px;
+                        &:hover {
+                            border-color:$ironColor;
+                            color:$ironColor;
+                        }
+                    }
+                }
+                .p_content {
+                    height:90%;
+                    width:100%;
+                    @include flexbox(center,center,column);
+                }
+            }
+        }
+    }
+    #bloop_small_services {
+        height:60vh;
+        .content_container {
+            width:50%;
+            height:100%;
+            @include flexbox(flex-start,center,column);
+            flex-wrap:wrap;
+            h2{
+                color:$ironColor;
+                text-align:left;
+                width:90%;
+                margin-bottom:10px;
+                margin-left:4vw;
+            }
+            p{
+                width:90%;
+                text-align:left;
+                color:$lightwhiteColor;
+                margin-bottom:10px;
+                margin-left:4vw;
+            }
+            .button {
+                margin-top:5px;
+                margin-bottom:5px;
+                margin-left:4vw;
+                a {
+                    @include button($pureblackColor,none,$purewhiteColor,10px 45px,none);
+                    &:hover {
+                       background:$purewhiteColor;
+                       color:$pureblackColor;
+                    }
+                }
+            }
+          
+        }
+        .content_container_benefits {
+            width:50%;
+            height:60%;
+        }
+    }
+}
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/services/background.jpg);
+        background-position: center;
+        background-size:cover;
+    }
+    #heading {
+        h2 {
+            margin-top:40px;
+            margin-left:4vw;
+        }
+        p{
+            margin-top:5px;
+            margin-left:4vw;
+            font-size:$threelink;
+        }
+    }
+    #overall_services {
+        height:100%;
+        width:100%;
+        background:$purewhiteColor;
+        margin-bottom:20px 0px;
+        @include flexbox(center,center,column);
+        .block_column_image {
+            width:90vw;
+            height:90vh;
+            position: relative;
+            margin: 20px 10px;
+            .content_column {
+                width:90%;
+                height:50%;
+                margin:10px 0px;
+                background:rgba(255,255,255,0.95);
+                h4 {
+                    margin:10px 0px;
+                    color:$ironColor;
+                    font-size:$threesubtitle;
+                }
+                .button {
+                    margin:20px 0px;
+                    width:90%;
+                    a {
+                        @include button(none,1px solid $lightgrey2,$lightgrey2,7px 15px,none);
+                        font-size:12px;
+                        &:hover {
+                            border-color:$ironColor;
+                            color:$ironColor;
+                        }
+                    }
+                }
+                .p_content {
+                    height:90%;
+                    width:100%;
+                    @include flexbox(center,center,column);
+                }
+            }
+        }
+    }
+    #bloop_small_services {
+        height:100vh;
+        @include flexbox(center,center,column);
+        background: linear-gradient(180deg, $caramelColor 50%, #ededed 50%);
+        .content_container {
+            width:90%;
+            height:45%;
+            h2{
+                color:$ironColor;
+                text-align:left;
+                width:90%;
+                margin-bottom:10px;
+                margin-left:4vw;
+            }
+            p{
+                width:90%;
+                text-align:left;
+                color:$lightwhiteColor;
+                margin-bottom:10px;
+                margin-left:4vw;
+            }
+            .button {
+                margin-top:5px;
+                margin-bottom:5px;
+                margin-left:4vw;
+                a {
+                    @include button($pureblackColor,none,$purewhiteColor,10px 45px,none);
+                    &:hover {
+                    background:$purewhiteColor;
+                    color:$pureblackColor;
+                    }
+                }
+            }
+        
+        }
+        .content_container_benefits {
+            width:90%;
+            height:50%;
+            video {
+                height:70%;
+            }
+        }
+    }
+    #options_services_payment {
+        width:100%;
+        height:70vh;
+        @include flexbox(center,center,column);
+        .alignment_container {
+            width:100%;
+            @include flexbox(center,center,row);
+            border-bottom:1px solid #ededed;
+            .option_container {
+                width:50%;
+                height:100%;
+                border-right:1px solid #ededed;
+                @include flexbox(center,center,column);
+                a {
+                    margin-bottom: 20px;
+                    color:$lightgrey1;
+                }
+                h5 {
+                    color:$lightgrey1;
+                    font-size:$threeparagraph;
+                }
+            }
+        }  
+    }
+}
+//end of services
+
+//rentroom
+@media screen and (min-width: 500px) and (max-width:900px) {
+    #rentroom_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/rentroom/background.jpg);
+        background-position: center;
+        background-size:cover;
+        .sub_navigation {
+            width:100%;
+            bottom:10px;
+            left:10px;
+            a {
+                color:$lightwhiteColor;
+                margin:10px 15px;
+                transition:0.4s all ease-in-out;
+                &:hover {
+                    color:$caramelColor;
+                }
+            }
+        }
+        .price_start {
+            display:none;
+        }
+    }
+    #overall_room {
+        height:100%;
+        background:$purewhiteColor;
+        @include flexbox(center,center,column);
+        .effective_room {
+            width:100%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .header_container {
+                width:90%;
+                p {
+                    font-size:$threelink;
+                    margin:10px 0px;
+                }
+            }
+            .gallery_book_now_container {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                .gallery_container {
+                    width:90%;
+                    height:70vh;
+                    .gallery-hightlight {
+                        width:100%;
+                        }
+                        .room-preview {
+                            display: flex;
+                            width: 40%;
+                            position:absolute;
+                            bottom:0;
+                        }
+                        .room-preview img {
+                            border: 2px solid $pureblackColor;
+                            flex-grow: 1;
+                            height: 40px;
+                            width:60px;
+                            opacity: 0.5;
+                            margin:5px 7px;
+                            transition: opacity 0.4s ease;
+                            cursor: pointer;
+                        }
+                        
+                        img.room-active {
+                            opacity: 1;
+                        }
+                        img {
+                            width:100%;
+                            height:100%;
+                            object-fit: cover;
+                        }
+                }
+                .book_now_rooms {
+                    height:70vh;
+                    width:90%;
+                    margin-left:0;
+                    form {
+                        width:100%;
+                        height:100%;
+                        input[type=date] {
+                            margin-top:15px;
+                            background:$ironColor;
+                            color:$purewhiteColor;
+                            width:80%;
+                            border:1px solid $pureblackColor;
+                        }
+                        @include flexbox(center,center,column);
+                        .book_now_information {
+                            width:90%;
+                            height:70%;
+                            @include flexbox(center,center,column);
+                            .book_now_alignment {
+                                width:100%;
+                                height:50%;
+                                .book_now_info_container {
+                                    margin:5px;
+                                    width:45%;
+                                    height:90%;
+                                    h5 {
+                                        margin-bottom:10px;
+                                    }
+                                    .number-input {
+                                        width:50%;
+                                        height:50%;
+                                        a {
+                                            font-size:$twotitle01;
+                                            display:none;
+                                        } 
+                                        input[type=number] {
+                                            width: 5vw;
+                                            font-size: $twotitle01;
+                                        }
+                                        p {
+                                            font-size:$twosubtitle;
+                                        }
+                                    }       
+                                }
+                            }
+                            
+                        }
+                        .button {
+                            width: 85%;
+                          }   
+                    }
+                }
+            }
+            .room_description_best_rooms {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                .room_description {
+                    width:90%;
+                    height:100%;
+                    @include flexbox(center,center,column);
+                    hr {
+                        width:100%;
+                        height:1px;
+                        border:1px solid #ededed;
+                    }
+                    p {
+                        margin:5px 0px;
+                    }
+                    .benefits_container {
+                        margin-bottom:0;
+                        margin:0px 0px;
+                        width:100%;
+                        height:20vh;
+                        @include flexbox(center,center,row);
+                        .benefit_container{
+                            width:30%;
+                            height:100%;
+                            @include flexbox(center,center,column);
+                            a {
+                                color:$lightgrey1;
+                                margin:0;
+                            }
+                            p {
+                                color:$lightgrey1;
+                                margin:0;
+                                margin-top:10px;
+                            }
+                        }
+                    }
+                    .text_description {
+                        height:40vh;
+                        width:100%;
+                        @include flexbox(flex-start,center,column);
+                        p {
+                            margin:15px 0px;
+                            color:$lightgrey2;
+                        }
+                    }
+                    #room_services {
+                        margin:20px 0px;
+                        width:100%;
+                        height:20vh;
+                        @include flexbox(flex-start,center,column);
+                        h4 {
+                            margin:10px 10px 10px 0px;
+                        }
+                        .services_container {
+                            @include flexbox(flex-start,flex-start,row);
+                            flex-wrap:wrap;
+                            a {
+                                margin:10px 15px 10px 0px;
+                                color:$lightgrey1;
+                            }
+                        }
+                    }
+                     .check_availability {
+                        width:100%;
+                        height:30vh;
+                        background:$purewhiteColor;
+                        @include flexbox(center,center,column);
+                        margin:10px 0px;
+                        form {
+                            width:100%;
+                            height:100%;
+                           
+                            @include flexbox(center,center,row);
+                            .checkin_out{
+                                height:100%;
+                                width:35%;
+                                 @include flexbox(center,center,column);
+                                p{
+                                   
+                                    color:$lightgrey2;
+                                }
+                                input[type=date] {
+                                    width:70%;
+                                    border:none;
+                                    border:1px solid $lightgrey1;
+                                    padding:7px;
+                                }
+                            }
+                            .book_now{
+                                background-color: $ironColor;
+                                color: white;
+                                padding: 10px 15px;
+                                margin: 8px 0;
+                                width:30%;
+                                border: none;
+                                cursor: pointer;
+                            }   
+                        }
+                    }
+                }
+                .recommended_rooms {
+                    width:90%;
+                    height:35%;
+                    margin-left:0px;
+                    h4 {
+                        margin:0px;
+                        height:20%;
+                        align-self: flex-start;
+                    }
+                    @include flexbox(center,center,column);
+                    .alignment_container {
+                        @include flexbox(center,center,row);
+                        width:100%;
+                        height:80%;
+                        margin-bottom:20px;
+                        .block_of_room {
+                            width:33%;
+                            height: 100%;
+                            margin:20px 0px;
+                            @include flexbox(center,center,column);
+                            .image_container {
+                                height:50%;
+                                width: 90%;
+                                img {
+                                    width:100%;
+                                    height:100%;
+                                    object-fit:cover;
+                                }
+                            }
+                            .details_container {
+                                width:100%;
+                                height:50%;
+                                margin-left:20px;
+                                @include flexbox(flex-start,center,column);
+                                h5{
+                                    font-size:$threenavigation;
+                                   
+                                }
+                            }
+                        }       
+                    }
+                }
+            }        
+         }
+    }
+    #similar_rooms {
+        background:#ededed;
+        width:100%;
+        height:100%;
+        @include flexbox(center,center,column);
+        .blocks_container {
+            width:90%;
+            height:100%;
+            margin-bottom:0px;
+            .header_container {
+                align-self:unset;
+                margin-left:20px;
+                width:100%;
+                height:20vh;
+                h4 {
+                   font-size:$twosubtitle;
+                }
+                p:nth-child(2) {
+                    font-size:$twoparagraph;
+                }
+            }
+            .blocks_alignment {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                margin-bottom: 20px;
+                .block_content {
+                    width:100%;
+                    height:60vh;
+                    background:$purewhiteColor;
+                    margin:10px 0;
+                    @include flexbox(center,center,row);
+                    .content_container {
+                        width:100%;
+                        height:60%;
+                        @include flexbox(center,center,column);
+                    }
+                    h5 {
+                        color:$ironColor;
+                    }
+                    .headofblock {
+                        width:60%;
+                        height:100%;
+                        p {
+                            font-size:$threeparagraph;
+                        }
+                    }
+                    .benefits_container {
+                        margin:20px 0px;
+                        width:100%;
+                        @include flexbox(center,center,row);
+                        .benefit_container {
+                            width:50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 310px) and (max-width:500px) {
+    #rentroom_image_container {
+        background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/rentroom/background.jpg);
+        background-position: center;
+        background-size:cover;
+        .sub_navigation {
+            width:100%;
+            bottom:10px;
+            left:5px;
+            a {
+                color:$lightwhiteColor;
+                margin:10px 7px;
+            }
+        }
+        .price_start {
+            display:none;
+        }
+    }
+    #overall_room {
+        height:100%;
+        background:$purewhiteColor;
+        @include flexbox(center,center,column);
+        .effective_room {
+            width:100%;
+            height:100%;
+            @include flexbox(center,center,column);
+            .header_container {
+                width:90%;
+                height:25vh;
+                p {
+                    font-size:$threelink;
+                    margin:10px 0px;
+                }
+            }
+            .gallery_book_now_container {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                .gallery_container {
+                    width:100%;
+                    height:60vh;
+                    .gallery-hightlight {
+                        width:100%;
+                        }
+                        .room-preview {
+                            display: flex;
+                            width: 70%;
+                            position:absolute;
+                            bottom:0;
+                        }
+                }
+                .book_now_rooms {
+                    height:65vh;
+                    width:100%;
+                    margin-left:0;
+                    form {
+                        width:100%;
+                        height:100%;
+                        input[type=date] {
+                            margin-top:15px;
+                            background:$ironColor;
+                            color:$purewhiteColor;
+                            width:80%;
+                            border:1px solid $pureblackColor;
+                        }
+                        @include flexbox(center,center,column);
+                        .book_now_information {
+                            width:90%;
+                            height:70%;
+                            @include flexbox(center,center,column);
+                            .book_now_alignment {
+                                width:100%;
+                                height:50%;
+                                .book_now_info_container {
+                                    margin:5px 5px;
+                                    width:45%;
+                                    height:90%;
+                                    h5 {
+                                        margin-bottom:10px;
+                                    }
+                                    .number-input {
+                                        width:50%;
+                                        height:50%;
+                                        a {
+                                            font-size:$threetitle02;
+                                            display:none;
+                                        } 
+                                        input[type=number] {
+                                            width: 20vw;
+                                            font-size: $threetitle01;
+                                        }
+                                        p {
+                                            font-size:$threesubtitle;
+                                        }
+                                    }       
+                                }
+                            }
+                            
+                        }
+                        .button {
+                            width: 85%;
+                          }   
+                    }
+                }
+            }
+            .room_description_best_rooms {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                .room_description {
+                    width:90%;
+                    height:100%;
+                    @include flexbox(center,center,column);
+                    hr {
+                        width:100%;
+                        height:1px;
+                        border:1px solid #ededed;
+                    }
+                    p {
+                        margin:5px 0px;
+                    }
+                    .benefits_container {
+                        margin-bottom:0;
+                        margin:0px 0px;
+                        width:100%;
+                        height:25vh;
+                        @include flexbox(center,center,row);
+                        .benefit_container{
+                            width:30%;
+                            height:100%;
+                            margin:20px 5px;
+                            @include flexbox(center,center,column);
+                            a {
+                                color:$lightgrey1;
+                                margin:0;
+                            }
+                            p {
+                                color:$lightgrey1;
+                                margin:0;
+                                margin-top:10px;
+                            }
+                        }
+                    }
+                    .text_description {
+                        height:50vh;
+                        width:100%;
+                        margin:0;
+                        @include flexbox(flex-start,center,column);
+                        p {
+                            margin:10px 0px;
+                            color:$lightgrey2;
+                        }
+                    }
+                    #room_services {
+                        width:100%;
+                        height:40vh;
+                        margin:0;
+                        @include flexbox(flex-start,center,column);
+                        h4 {
+                            margin:15px 10px 10px 0px;
+                        }
+                        .services_container {
+                            @include flexbox(flex-start,center,column);
+                            flex-wrap:wrap;
+                            a {
+                                margin:10px 15px 10px 0px;
+                                color:$lightgrey1;
+                            }
+                        }
+                    }
+                     .check_availability {
+                        width:100%;
+                        height:40vh;
+                        background:$purewhiteColor;
+                        @include flexbox(center,center,column);
+                        margin:20px 0px;
+                        form {
+                            width:100%;
+                            height:100%;
+                           
+                            @include flexbox(center,center,column);
+                            .checkin_out{
+                                height:100%;
+                                width:90%;
+                                 @include flexbox(center,center,column);
+                                p{
+                                   
+                                    color:$lightgrey2;
+                                }
+                                input[type=date] {
+                                    width:80%;
+                                    border:none;
+                                    border:1px solid $lightgrey1;
+                                    padding:7px;
+                                }
+                            }
+                            .book_now{
+                                @include flexbox(center,center,column);
+                                background-color: $ironColor;
+                                color: white;
+                                padding: 12px 15px;
+                                margin: 20px 0;
+                                width:80%;
+                                border: none;
+                                cursor: pointer;
+                            }   
+                        }
+                    }
+                }
+                .recommended_rooms {
+                    width:90%;
+                    height:50%;
+                    margin-left:0px;
+                    h4 {
+                        margin:0px;
+                        height:10%;
+                        align-self: flex-start;
+                    }
+                    @include flexbox(center,center,column);
+                    .alignment_container {
+                        @include flexbox(center,center,column);
+                        width:100%;
+                        height:90%;
+                        margin-bottom:20px;
+                        .block_of_room {
+                            width:100%;
+                            height: 33%;
+                            margin:10px 0px;
+                            @include flexbox(center,center,column);
+                            .image_container {
+                                height:50%;
+                                width: 100%;
+                                img {
+                                    width:100%;
+                                    height:100%;
+                                    object-fit:cover;
+                                }
+                            }
+                            .details_container {
+                                width:100%;
+                                height:50%;
+                                margin-left:20px;
+                                @include flexbox(flex-start,center,column);
+                                h5{
+                                    font-size:$threenavigation;
+                                   
+                                }
+                            }
+                        }       
+                    }
+                }
+            }        
+         }
+    }
+    #similar_rooms {
+        background:#ededed;
+        width:100%;
+        height:100%;
+        @include flexbox(center,center,column);
+        .blocks_container {
+            width:90%;
+            height:100%;
+            margin-bottom:0px;
+            .header_container {
+                align-self:unset;
+                margin-left:20px;
+                width:100%;
+                height:20vh;
+                h4 {
+                   font-size:$twosubtitle;
+                }
+                p:nth-child(2) {
+                    font-size:$twoparagraph;
+                }
+            }
+            .blocks_alignment {
+                width:100%;
+                height:100%;
+                @include flexbox(center,center,column);
+                margin-bottom: 20px;
+                .block_content {
+                    width:100%;
+                    height:90vh;
+                    background:$purewhiteColor;
+                    margin:10px 20px;
+                    @include flexbox(center,center,column);
+                    .content_container {
+                        width:100%;
+                        height:60%;
+                        @include flexbox(center,center,column);
+                    }
+                    h5 {
+                        color:$ironColor;
+                    }
+                    .headofblock {
+                        width:100%;
+                        height:40%;
+                        p {
+                            font-size:$threeparagraph;
+                        }
+                    }
+                    .benefits_container {
+                        margin:20px 0px;
+                        width:100%;
+                        @include flexbox(center,center,row);
+                        .benefit_container{
+                            width:50%;
+                        }
+                    }
+                    .button {
+                        margin-top:20px;
+                        a {
+                            @include button(none,1px solid $caramelColor,$caramelColor,7px 15vw,unset);                }
+                    }
+                }
+            }
+        }
+    }
+}

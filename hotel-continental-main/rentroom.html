@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Continental Hotel - welcome to our website.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    </head>
+    <body>
+        <section id="header">
+            <div class="user_services">
+                <div class="options">
+                    <a class="fa fa-credit-card-alt" href="information.html"> Payment Options</a>
+                    <a class="fa fa-check-square-o" href="information.html"> Terms & Conditions</a>
+                </div>
+                <div class="client_area">
+                    <div class="my_settings">
+                        <a class="fa fa-envelope-o" href="client.html"> My Bookings</a>
+                        <a class="fa fa-pencil" href="client.html"> Add Your Review</a>
+                    </div>
+                    <div class="auth_button">
+                        <a class="fa fa-user-circle-o fa-2x"></a>
+                        <a href="register.html">Register</a> / <a href="signin.html">Sign In</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user_navigation">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="Continental"></a>
+                </div>
+                <div class="links">
+                    <a class="home" href="index.html">Home</a>
+                    <a class="rooms" href="rentroom.html">Rooms</a>
+                    <a class="services" href="services.html">Services</a>
+                    <a class="about" href="about.html">About us</a>
+                    <a class="contact" href="contact.html">Contact</a>
+                    <div class="book_button">
+                        <a href="rentroom.html">BOOK NOW</a>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <div class="hamburger-menu">
+                        <a class="home" href="index.html" onclick="toggleMenu()">Home</a>
+                        <a class="rooms" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
+                        <a class="services" href="services.html" onclick="toggleMenu()">Services</a>
+                        <a class="about" href="about.html" onclick="toggleMenu()">About us</a>
+                        <a class="contact" href="contact.html" onclick="toggleMenu()">Contact</a> 
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <div id="rentroom_image_container">
+            <h3>Rooms offers</h3>
+            <p>We keep people together and things simple.</p>
+            <div class="sub_navigation">
+                <a href="#overall_room">DESCRIPTION</a>
+                <a href="#similar_rooms">SIMILAR ROOMS</a>
+            </div>
+            <div class="price_start">
+                <p><span>50$ </span>/ PER NIGHT</p>
+            </div>
+
+        </div>
+        <section id="overall_room">
+            <div class="effective_room">
+                <div class="header_container">
+                    <h4>Small Room</h4>
+                    <p>HOTEL CONTINENTAL <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                </div>
+               <div class="gallery_book_now_container">
+                    <div class="gallery_container">
+                        <img class="gallery-hightlight" src="assets/images/rentroom/firstroom/room1-big.jpeg" alt="room1" />
+                        <div class="room-preview">
+                        <img src="assets/images/rentroom/firstroom/room1-small.jpeg" class="room-active" alt="" />
+                        <img src="assets/images/rentroom/firstroom/room2-small.jpeg" alt="" />
+                        <img src="assets/images/rentroom/firstroom/room3-small.jpeg" alt="" />
+                        </div>
+                    </div>
+                    <div class="book_now_rooms">
+                        <form id="book_now_form">
+                            <div class="book_now_information">
+                                <div class="book_now_alignment">
+                                    <div class="book_now_info_container">
+                                        <h5>Check-In</h5>
+                                        <input type="date" name="date_1" min="2021-04-01" max="2021-12-31"  required >
+                                    </div>
+                                    <div class="book_now_info_container">
+                                          <h5>Check-Out</h5>
+                                          <input type="date" name="date_2" min="2021-04-01" max="2021-12-31"  required>   
+                                    </div>
+                                </div>
+                                <div class="book_now_alignment">
+                                    <div class="book_now_info_container">
+                                        <h5 class="night_rentroom">Night</h5>
+                                        <div class="number-input">
+                                            <input class="quantity" min="0" max="10" name="nights" value="1" type="number">
+                                            
+                                            <div class="buttons">
+                                                <a class="fa fa-caret-up nightsevent"></a>
+                                                <a class="fa fa-caret-down nightsevent"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book_now_info_container">
+                                        <h5 class="guest_rentroom">Guest</h5>
+                                        <div class="number-input">
+                                            <input class="quantity" min="0" max="10" name="guests" value="1" type="number">
+                                            <div class="buttons">
+                                                <a class="fa fa-caret-up guestevent"></a>
+                                                <a class="fa fa-caret-down guestevent"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="button">BOOK NOW</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="room_description_best_rooms">
+                    <div class="room_description">
+                        <h5>General information</h5>
+                        <div class="benefits_container">
+                                    <div class="benefit_container">
+                                        <a class="fa fa-user-circle fa-2x"></a>
+                                    <p> 1 GUEST</p>
+                                    </div>
+                                    <div class="benefit_container">
+                                        <a class="fa fa-building fa-2x"></a>
+                                    <p> 32m<sup>2</sup></p>
+                                    </div>
+                                    <div class="benefit_container">
+                                        <a class="fa fa-bed fa-2x"></a>
+                                        <p>50 $ / PER NIGHT</p>
+                                    </div>
+                        </div>
+                        <hr>
+                        <div class="check_availability">
+                            <h5>Check the availability of the room</h5>
+                            <form id="room_availability">
+                                <div class="checkin_out">
+                                    <p>CHECK-IN</p>
+                                    <input type="date" name="date_1" min="2021-04-01" max="2021-12-31"  required >
+                                </div>
+                                <div class="checkin_out">
+                                    <p>CHECK-OUT</p>
+                                    <input type="date" name="date_2" min="2021-04-01" max="2021-12-31"  required> 
+                                </div>
+                                <button type="submit"  class="book_now">CHECK AVAILABILITY</button>
+                           </form>
+                        </div>
+                        <hr>
+                        <div class="text_description">
+                            <h5>About the room</h5>
+                            <p>
+                                    All Small Rooms  are located on the ground floor of the hotel. Luxuriously appointed with Pillowtop King Beds, mini bar, large screen HD TV and solid timber furniture with marble tops, your stay in Continental will be more than comfortable when you choose to stay with us.
+                            </p>
+                            <p>
+                                    To view our current rates and availability please click the book now button. If you have any other enquiries please contact us on 
+                            </p>
+                        </div>
+                        <hr>
+                        <div id="room_services">
+                            <h5> Room Services </h5>
+                            <div class="services_container">
+                                    <a class="fa fa-bath"> Private Bathroom</a>
+                                    <a class="fa fa-level-up">Lift Acces</a>
+                                    <a class="fa fa-television">Television and Netflix</a>
+                                    <a class="fa fa-wifi">Free Internet (wi-fi and cable)</a>
+                                    <a class="fa fa-check">Air Conditioner</a>
+                            </div>
+                        </div>    
+                    </div>        
+                    <div class="recommended_rooms">
+                        <h4>Best Rooms</h4>
+                        <div class="alignment_container">
+                            <div class="block_of_room">
+                                <div class="image_container">
+                                    <img src="assets/images/rentroom/oneroom/head1.jpg"/>
+                                </div>
+                                <div class="details_container">
+                                    <h5>One bed Room</h5>
+                                    <p>from 40 $ / night</p>
+                                    <div class="button">
+                                        <a href="/booking.html">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block_of_room">
+                                <div class="image_container">
+                                    <img src="assets/images/rentroom/oneroom/head2.jpg"/>
+                                </div>
+                                <div class="details_container">
+                                    <h5>Two beds Room</h5>
+                                    <p>from 65 $ / night</p>
+                                    <div class="button">
+                                        <a href="/booking.html">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block_of_room">
+                                <div class="image_container">
+                                    <img src="assets/images/rentroom/oneroom/head3.jpg"/>
+                                </div>
+                                <div class="details_container">
+                                    <h5>Couple's Room</h5>
+                                    <p>from 55 $ / night</p>
+                                    <div class="button">
+                                        <a href="/booking.html">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>  
+        <div id="similar_rooms">
+            <div class="blocks_container">
+                <div class="header_container">
+                    <h4>Similar Rooms</h4>
+                    <p>HOTEL CONTINENTAL <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                </div> 
+                <div class="blocks_alignment">
+                    <div class="block_content">
+                        <div class="headofblock">
+                            <img src="assets/images/rentroom/family/head.jpg"/>
+                            <p>HOTEL CONTINENTAL <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                        </div>
+                        <div class="content_container">
+                            <h5>FAMILY ROOM</h5>
+                            <div class="benefits_container">
+                                <div class="benefit_container">
+                                    <a class="fa fa-user-circle fa-2x"></a>
+                                <p> up to 4 GUESTS</p>
+                                </div>
+                                <div class="benefit_container">
+                                    <a class="fa fa-building fa-2x"></a>
+                                <p> 60m<sup>2</sup></p>
+                                </div>
+                                
+                            </div>
+                            <p>
+                                All Family Rooms  are located on the ground floor of
+                                the hotel. Luxuriously appointed with double beds, mini bar, large screen HD TV and solid timber 
+                                furniture with marble tops and big bathrooms with jacuzzi.
+                            </p>
+                            <div class="button">
+                                <a href="/booking.html">BOOK NOW</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="block_content">
+                        <div class="headofblock">
+                            <img src="assets/images/rentroom/apartment/head.jpg"/>
+                            <p>HOTEL CONTINENTAL <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                        </div>
+                        <div class="content_container">
+                            <h5>APARTMENT SUITE</h5>
+                            <div class="benefits_container">
+                            <div class="benefit_container">
+                                <a class="fa fa-user-circle fa-2x"></a>
+                            <p> up to 7 GUESTS</p>
+                            </div>
+                            <div class="benefit_container">
+                                <a class="fa fa-building fa-2x"></a>
+                            <p> 120m<sup>2</sup></p>
+                            </div>
+                            
+                            </div>
+                            <p>
+                                All Apartment Suite are Luxuriously furnished to a 
+                                first class standard. These stylishly decorated rooms 
+                                are appointed with our signature double king bed
+                                acoustic double glazed windows, 100cm TV screen.
+                            </p>
+                            <div class="button">
+                                <a href="/booking.html">BOOK NOW</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="block_content">
+                        <div class="headofblock">
+                            <img src="assets/images/rentroom/roomwithview/head.jpg"/>
+                            <p>HOTEL CONTINENTAL <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                        </div>
+                        <div class="content_container">
+                            <h5>ROOM WITH VIEW</h5>
+                            <div class="benefits_container">
+                                <div class="benefit_container">
+                                    <a class="fa fa-user-circle fa-2x"></a>
+                                <p> up to 2 GUESTS</p>
+                                </div>
+                                <div class="benefit_container">
+                                    <a class="fa fa-building fa-2x"></a>
+                                <p> 50m<sup>2</sup></p>
+                                </div>
+                        
+                            </div>
+                            <p>
+                                The Room with view suite is designed to cater for 
+                                those who are looking for an amazin view.Lift or stair
+                                access will take you too one of our luxurious
+                                suite featuring all benefits that hotel offer for clients.
+                            </p>
+                            <div class="button">
+                                <a href="/booking.html">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="footer">
+            <div class="upper_content">
+                <div class="data_container">
+                    <h4>Phone Support</h4> 
+                    <p>24 HOURS A DAY</p>
+                    <h5>+(40)799387932</h5>
+                </div>
+                <div class="data_container">
+                    <h4>Follow us</h4> 
+                    <p>SOCIAL MEDIA ACCOUNTS</p>
+                    <div class="social_media">
+                        <a href="#" class="fa fa-youtube-play"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-facebook-official"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="data_container">
+                    <h4>Our Newsletter</h4> 
+                    <p>SUBSCRIBE FOR MORE OFFERS</p>
+                    <div class="button">
+                        <form action="/newletter.php">
+                            <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email" name="email" required>
+                            <input type="submit" value="SUBSCRIBE">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="lower_content">
+                <div class="links">
+                    <a class="home" href="index.html">Home</a>
+                    <a class="rooms" href="rentroom.html">Rooms</a>
+                    <a class="services" href="services.html">Services</a>
+                    <a class="about" href="about.html">About us</a>
+                    <a class="contact" href="contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    <p>Continental Hotel © 2021. All Rights Reserved. </p>
+                </div>
+            </div>
+        </section>
+        <div id="preloader">
+            <span>↓</span>
+            <span style="--delay: 0.1s">↓</span>
+            <span style="--delay: 0.3s">↓</span>
+            <span style="--delay: 0.4s">↓</span>
+            <span style="--delay: 0.5s">↓</span>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js" async defer></script>
+</html>

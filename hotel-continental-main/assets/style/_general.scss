@@ -3,10 +3,10 @@
     margin:0;
     box-sizing: border-box;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 body {
-    font-family: "Times New Roman",times,serif;
+    font-family: "Tinos",serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
     width:100%;
@@ -29,11 +29,60 @@ h5 {
 }
 p {
     font-size:$paragraph;
-    letter-spacing: 2px;
 }
 a {
     font-size:$link;
     letter-spacing: 1px;
+}
+
+@media screen and (min-width: 500px) and (max-width:900px) { 
+    h1 {
+        font-size: $twotitle01;
+    }
+    h2 {
+        font-size: $twotitle02;
+    }
+    h3 {
+        font-size: $twotitle03;
+    }
+    h4 {
+        font-size:$twosubtitle;
+    }
+    h5 {
+        font-size:$twonavigation;
+    }
+    p {
+        font-size:$twoparagraph;
+    }
+    a {
+        font-size:$twolink;
+        letter-spacing: 1px;
+    }    
+}
+
+@media screen and (min-width: 310px) and (max-width:500px) { 
+    h1 {
+        font-size: $threetitle01;
+    }
+    h2 {
+        font-size: $threetitle02;
+    }
+    h3 {
+        font-size: $threetitle03;
+    }
+    h4 {
+        font-size:$threesubtitle;
+    }
+    h5 {
+        font-size:$threenavigation;
+    }
+    p {
+        font-size:$threeparagraph;
+    }
+    a {
+        font-size:$threelink;
+        letter-spacing: 1px;
+    }    
 }
 
 @mixin flexbox($position ,$position2 , $direction) {

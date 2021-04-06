@@ -1,7 +1,7 @@
 #image_container {
     height:50vh;
     width:100%;
-    background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/services/background.jpeg) center center;
+    background:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/services/background.jpg) center;
     background-attachment: fixed;
     background-size:cover;
     @include flexbox(center,center,column);
@@ -12,8 +12,155 @@
         color:$purewhiteColor;
     }
 }
+#heading {
+    width:100%;
+    height:10vh;
+    h2 {
+        color:$ironColor;
+        margin-top:40px;
+        margin-left:8vw;
+    }
+    p{
+        margin-top:5px;
+        margin-left:8vw;
+        font-size:$link;
+    }
+    i {
+        color:$caramelColor;
+    }
+}
+
 #overall_services {
-    height:100vh;
+    height:110vh;
     width:100%;
     background:$purewhiteColor;
+    margin-bottom:20px 0px;
+    @include flexbox(center,center,row);
+    .block_column_image {
+        width:26vw;
+        height:42vw;
+        margin:0px 20px;
+        @include flexbox(center,flex-end,column);
+        position: relative;
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            position:absolute;
+            z-index:0;
+        }
+        .content_column {
+            width:83%;
+            height:50%;
+            position: inherit;
+            z-index:2;
+            margin:20px 0px;
+            @include flexbox(center,center,column);
+            background:rgba(255,255,255,0.95);
+            h4 {
+                margin:10px 0px;
+                color:$ironColor;
+            }
+            hr {
+                width:20%;
+                height:1px;
+                margin:5px 0px;
+                background:#ededed;
+            }
+            p{
+                margin:5px 0px;
+                text-indent: 5px;
+                color:$lightgrey3;
+                width:85%;
+            }
+            .button {
+                margin:15px 0px;
+                a {
+                    @include button(none,1px solid $lightgrey2,$lightgrey2,7px 35px,none);
+                    &:hover {
+                        border-color:$ironColor;
+                        color:$ironColor;
+                    }
+                }
+            }
+            .p_content {
+                height:90%;
+                width:100%;
+                @include flexbox(center,center,column);
+            }
+        }
+    }
+}
+#bloop_small_services {
+    height:75vh;
+    width:100%;
+    background: linear-gradient(90deg, $caramelColor 50%, #ededed 50%);
+    @include flexbox(center,center,row);
+    .content_container {
+        width:50%;
+        height:100%;
+        @include flexbox(flex-start,center,column);
+        flex-wrap:wrap;
+        h2{
+            color:$ironColor;
+            text-align:left;
+            width:90%;
+            margin-bottom:10px;
+            margin-left:4vw;
+        }
+        p{
+            width:90%;
+            text-align:left;
+            color:$lightwhiteColor;
+            margin-bottom:10px;
+            margin-left:4vw;
+        }
+        .button {
+            margin-top:5px;
+            margin-bottom:5px;
+            margin-left:4vw;
+            a {
+                @include button($pureblackColor,none,$purewhiteColor,10px 45px,none);
+                &:hover {
+                   background:$purewhiteColor;
+                   color:$pureblackColor;
+                }
+            }
+        }
+      
+    }
+    .content_container_benefits {
+        width:50%;
+        height:70%;
+        @include flexbox(center,center,column);
+        video {
+            width:90%;
+            height:90%;
+            object-fit: cover;
+        }
+    }
+}
+#options_services_payment {
+    width:100%;
+    height:40vh;
+    @include flexbox(center,center,row);
+    .alignment_container {
+        width:50%;
+        height:100%;
+        @include flexbox(center,center,row);
+        .option_container {
+            width:50%;
+            height:100%;
+            border-right:1px solid #ededed;
+            @include flexbox(center,center,column);
+            a {
+                margin-bottom: 20px;
+                color:$lightgrey1;
+            }
+            h5 {
+                color:$lightgrey1;
+                font-size:1.3vw;
+            }
+        }
+    }  
 }

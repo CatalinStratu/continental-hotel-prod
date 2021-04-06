@@ -1,0 +1,34 @@
+#preloader{
+    display: flex;
+    height: 100vh;
+    width:100%;
+    background:$purewhiteColor;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:50;
+    span {
+        font-size:$subtitle;
+        --delay: 0s;
+        animation: arrows 1s var(--delay) infinite ease-in;
+    }
+  }
+  .preloaderfinish {
+    opacity:0;
+    pointer-events: none;
+}
+  @keyframes arrows {
+    0%,
+    100% {
+      color: black;
+      transform: translateY(0);
+    }
+    50% {
+      color: $caramelColor;
+      transform: translateY(20px);
+    }
+  }
+  
+  

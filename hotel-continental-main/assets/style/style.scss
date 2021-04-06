@@ -1,5 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/32441506567156636049eb850b53f02a?family=Times+New+Roman);
-@font-face {font-family: "Times New Roman"; src: url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.eot"); src: url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.woff") format("woff"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/32441506567156636049eb850b53f02a.svg#Times New Roman") format("svg"); }
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 $caramelColor: #C19B76;
 $ironColor: #1c1c1d;
@@ -14,18 +13,41 @@ $lightgrey2: #7c7c7c;
 $lightgrey3: #5c5c5c;
 $lightgrey4: #3c3c3c;
 
-$title01: 4.8vw;
-$title02: 4vw;
-$title03:  3.3vw;
-$subtitle: 2.6vw;
-$navigation: 1.5vw;
+$title01: 70px;
+$title02: 55px;
+$title03:  45px;
+$subtitle: 35px;
+$navigation: 20px;
 $paragraph: 1.2vw;
-$link: 1vw;
+$link: 0.9vw;
+
+$twotitle01: 40px;
+$twotitle02: 35px;
+$twotitle03: 30px;
+$twosubtitle: 25px;
+$twonavigation: 18px;
+$twoparagraph: 15px;
+$twolink: 13.5px;
+
+
+$threetitle01: 30px;
+$threetitle02: 27px;
+$threetitle03: 25px;
+$threesubtitle: 22px;
+$threenavigation: 16px;
+$threeparagraph: 13px;
+$threelink: 12px;
 
 @import "./general";
 @import "./scrollbar";
+@import "./preloader";
 @import "./header";
-@import "./authreg";
-@import "./services";
-@import "./home";
 @import "./footer";
+@import "./home";
+@import "./rentroom";
+@import "./services";
+@import "./about";
+@import "./contact";
+@import "./authreg";
+@import "./mobile";
+
