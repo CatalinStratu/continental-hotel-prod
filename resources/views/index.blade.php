@@ -90,39 +90,26 @@
                     </div>
                     <div class="lower_content">
                         <div class="content_alignment">
-                            <h4>Small Room</h4>
-                            <a class="fa fa-user-circle"> <span>1 GUEST</span></a>
-                            <a class="fa fa-hotel"> <span>32m<sup>2</sup></span></a>
-                            <p> All Small Rooms  are located on the ground floor of the hotel. Luxuriously
-                                appointed with Pillowtop King Beds, mini bar, large screen HD TV and solid
-                                timber furniture with marble tops, your stay in Continental will be more than
-                                comfortable when you choose to stay with us.</p>
+                            <h4> {{ $RoomType->name  }}</h4>
+                            <a class="fa fa-user-circle"> <span>{{ $RoomType->guests }} GUEST(s)</span></a>
+                            <a class="fa fa-hotel"> <span>{{ $RoomType->size }}m<sup>2</sup></span></a>
+                            <p> {{ $RoomType->small_description }}</p>
                             <div class="button">
-                                <a href="rentroom.html">BOOK NOW FROM 50$</a>
+                                <a href="rentroom.html">BOOK NOW FROM {{ intval($RoomType->price) }}$</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="four_rooms">
-
+                    @foreach ($RoomTypes as $type)
                     <div class="square">
                         <img src="assets/images/home/room1.jpg" alt="room1">
-                        <p>FAMILY ROOM <a href="rentroom.html">BOOK FROM 120$ </a></p>
+                        <p>{{$type->name}} <a href="rentroom.html">BOOK FROM  {{intval($type->price)}}$ </a></p>
                     </div>
-                    <div class="square">
-                        <img src="assets/images/home/room2.jpg" alt="room1">
-                        <p>DOUBLE ROOM <a href="rentroom.html">BOOK FROM 130$ </a></p>
-                    </div>
-                    <div class="square">
-                        <img src="assets/images/home/room3.jpg" alt="room1">
-                        <p>LUXURY ROOM <a href="rentroom.html">BOOK FROM 150$ </a></p>
-                    </div>
-                    <div class="square">
-                        <img src="assets/images/home/room4.jpg" alt="room1">
-                        <p>APARTMENT <a href="rentroom.html">BOOK FROM 130$ </a></p>
-                    </div>
+                    @endforeach
                 </div>
+
             </div>
         </section>
     </x-slot>

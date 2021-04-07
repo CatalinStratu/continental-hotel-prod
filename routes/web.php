@@ -16,4 +16,3 @@ Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFaceboo
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-//support

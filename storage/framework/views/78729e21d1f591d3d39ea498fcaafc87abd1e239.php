@@ -36,7 +36,7 @@
                     <p>Please fill in this form in order to sign in.</p>
                     <hr>
                     <label for="email" class="fa fa-envelope"> Email *</label>
-                    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"  value="<?php echo e(old('email')); ?>" id="email" required>
+                    <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"  value="<?php echo e(old('email')); ?>" id="email" spellcheck="false" required>
 
                     <label for="psw" class="fa fa-lock"> Password *</label>
                     <input type="password" placeholder="Enter Password" name="password" id="password" required>

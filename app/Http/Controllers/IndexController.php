@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $RoomType = RoomType::where('id', '1')->first();
+        $RoomTypes = RoomType::orderBy('created_at', 'desc')->where('id','>', 1)->take(4)->get();
+        return view('index',compact('RoomTypes','RoomType'));
     }
 
     public function about()
