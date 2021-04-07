@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f96eb411-e738-42c7-8ab0-bc49acf9be85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/78729e21d1f591d3d39ea498fcaafc87abd1e239.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/78729e21d1f591d3d39ea498fcaafc87abd1e239.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/fff77e7064fcf5dac18fa02372f782ceb2b55d22.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/fff77e7064fcf5dac18fa02372f782ceb2b55d22.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +202,7 @@
       <updated>1617306834802</updated>
       <workItem from="1617306835820" duration="9236000" />
       <workItem from="1617741199198" duration="6942000" />
-      <workItem from="1617807145428" duration="4630000" />
+      <workItem from="1617807145428" duration="6985000" />
     </task>
     <servers />
   </component>

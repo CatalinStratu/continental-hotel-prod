@@ -1,32 +1,48 @@
- <?php if (isset($component)) { $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\AppLayout::class, []); ?>
-<?php $component->withName('app-layout'); ?>
+ <?php if (isset($component)) { $__componentOriginal68fd1716d3649640b85d625349a99a37b7434812 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\DashboardLayout::class, []); ?>
+<?php $component->withName('dashboard-layout'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes([]); ?>
      <?php $__env->slot('content'); ?> 
-     <?php $__env->endSlot(); ?>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'jetstream::components.welcome','data' => []]); ?>
-<?php $component->withName('jet-welcome'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes([]); ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?> 
+        <div class="reservations">
+            <div class="header">
+                <div class="label">MY BOOKINGS</div>
+                <hr>
+                <div class="table-header">
+                    <div class="parameter center">PDF</div>
+                    <div class="parameter">ROOM</div>
+                    <div class="parameter">TYPE</div>
+                    <div class="parameter">PRICE</div>
+                    <div class="parameter">DATE</div>
+                </div>
             </div>
+            <hr>
+
+            <div class="table-row">
+                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
+                <div class="value name">Room 0.1</div>
+                <div class="value">Single</div>
+                <div class="value">€150</div>
+                <div class="value short">01.05.2021 - 02.05.2021</div>
+                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
+            </div>
+
+            <div class="table-row">
+                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
+                <div class="value name">Room 0.1</div>
+                <div class="value">Single</div>
+                <div class="value">€150</div>
+                <div class="value short">01.05.2021 - 02.05.2021</div>
+                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
+            </div>
+            <hr>
+
         </div>
-    </div>
- <?php if (isset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da)): ?>
-<?php $component = $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da; ?>
-<?php unset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da); ?>
+     <?php $__env->endSlot(); ?>
+ <?php if (isset($__componentOriginal68fd1716d3649640b85d625349a99a37b7434812)): ?>
+<?php $component = $__componentOriginal68fd1716d3649640b85d625349a99a37b7434812; ?>
+<?php unset($__componentOriginal68fd1716d3649640b85d625349a99a37b7434812); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?> 
