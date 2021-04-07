@@ -30,7 +30,7 @@
                 <a class="fa fa-user-circle-o fa-2x"></a>
                 <?php if(Route::has('login')): ?>
                     <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/dashboard')); ?>">My Account</a> /
+                        <a href="<?php echo e(route('dashboard')); ?>">Dashboard</a> /
                         <form method="POST" action="<?php echo e(route('logout')); ?>">
                             <?php echo csrf_field(); ?>
                             <a href="<?php echo e(route('logout')); ?>"

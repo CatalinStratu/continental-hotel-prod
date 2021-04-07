@@ -13,12 +13,10 @@ Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 
 Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-
-})->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('settings', [\App\Http\Controllers\UserController::class, 'index'])->name('user.profile.update');
+        Route::put('/user/profile/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.profile.update');
     });
 });

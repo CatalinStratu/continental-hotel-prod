@@ -1,19 +1,24 @@
-<x-dashboard-layout>
-    <x-slot name="content">
+ <?php if (isset($component)) { $__componentOriginal68fd1716d3649640b85d625349a99a37b7434812 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\DashboardLayout::class, []); ?>
+<?php $component->withName('dashboard-layout'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+     <?php $__env->slot('content'); ?> 
         <div class="settings_forms">
             <h1 class="edit_employee_header">SETTINGS</h1>
             <hr>
-            <form method="POST" action="{{ route('user.profile.update') }}" id="settings_form_1">
-                @csrf
-                @method('PUT')
+            <form method="POST" action="<?php echo e(route('user.profile.update')); ?>" id="settings_form_1">
+                <?php echo csrf_field(); ?>
+                <?php echo method_field('PUT'); ?>
                 <div class="subtitle1">Change Details</div>
                 <div class="element">
                     <!-- <label for="names">Name</label> -->
-                    <input type="text"value="{{old("name",Auth::user()->name)}}" name="name" spellcheck="false" placeholder="Name" id="names" required>
+                    <input type="text"value="<?php echo e(old("name",Auth::user()->name)); ?>" name="name" spellcheck="false" placeholder="Name" id="names" required>
                 </div>
                 <div class="element">
                     <!-- <label for="emails">Email</label> -->
-                    <input type="email" value="{{old("email",Auth::user()->email)}}" name="email" spellcheck="false" placeholder="Email" id="emails" required>
+                    <input type="email" value="<?php echo e(old("email",Auth::user()->email)); ?>" name="email" spellcheck="false" placeholder="Email" id="emails" required>
                 </div>
 
                 <div class="edit_employee_footer">
@@ -44,5 +49,11 @@
             </form>
             <!-- <hr> -->
         </div>
-    </x-slot>
-</x-dashboard-layout>
+     <?php $__env->endSlot(); ?>
+ <?php if (isset($__componentOriginal68fd1716d3649640b85d625349a99a37b7434812)): ?>
+<?php $component = $__componentOriginal68fd1716d3649640b85d625349a99a37b7434812; ?>
+<?php unset($__componentOriginal68fd1716d3649640b85d625349a99a37b7434812); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?> 
+<?php /**PATH C:\Users\user\openserver\OSPanel\domains\hotel.com\resources\views/settings.blade.php ENDPATH**/ ?>

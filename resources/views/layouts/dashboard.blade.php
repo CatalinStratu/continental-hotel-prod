@@ -33,8 +33,8 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <a href="index.html" class="logo1">
-            <img src="assets_user/img/logo_continental_2.png" alt="logo">
+        <a href="{{route('index')}}" class="logo1">
+            <img src="{{ asset('assets_user/img/logo_continental_2.png') }}" alt="logo">
         </a>
     </div>
     <div class="nav__center">
@@ -49,13 +49,12 @@
             </div>
         </div>
     </div>
-    <a href="index.html" class="logo2">
-        <img src="assets_user/img/logo_continental_2.png" alt="logo">
+    <a href="{{route('index')}}" class="logo2">
+        <img src=" {{ asset('assets_user/img/logo_continental_2.png') }}" alt="logo">
     </a>
     <div class="nav__right">
         <!-- <a href="#" class="settings"><i class="fas fa-cog"></i></a> -->
-        <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i>
-            </i></a>
+        <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i></a>
     </div>
 </div>
 
@@ -63,7 +62,7 @@
     <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="sidebar__admin">
-            <img src="assets_user/img/user.svg" alt="admin picture">
+            <img src="{{ asset('assets_user/img/user.svg') }}" alt="admin picture">
             <div class="sidebar__admin__details">
                 <p id="nume-admin">Catalin Stratu</p>
                 <p id="functie-admin">Guest</p>

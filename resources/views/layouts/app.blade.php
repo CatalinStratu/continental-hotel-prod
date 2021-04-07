@@ -30,7 +30,7 @@
                 <a class="fa fa-user-circle-o fa-2x"></a>
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}">My Account</a> /
+                        <a href="{{ route('dashboard') }}">Dashboard</a> /
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <a href="{{ route('logout') }}"
