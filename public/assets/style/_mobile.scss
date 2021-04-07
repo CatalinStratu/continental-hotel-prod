@@ -1487,7 +1487,7 @@
                                     padding:7px;
                                 }
                             }
-                            .book_now{
+                            .check_availability_button{
                                 background-color: $ironColor;
                                 color: white;
                                 padding: 10px 15px;
@@ -1800,7 +1800,7 @@
                                     padding:7px;
                                 }
                             }
-                            .book_now{
+                            .check_availability_button{
                                 @include flexbox(center,center,column);
                                 background-color: $ironColor;
                                 color: white;

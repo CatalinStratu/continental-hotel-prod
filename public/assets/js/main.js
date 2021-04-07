@@ -43,63 +43,39 @@ const nightInput = document.querySelector('input[type=number][name=nights]');
 const guestInput = document.querySelector('input[type=number][name=guests]');
 const nights = document.querySelectorAll('.nightsevent');
 const guests = document.querySelectorAll('.guestevent');
-const paragraph = document.querySelector('.guest_modified');
 const nightHeadline5 = document.querySelector('.night_rentroom');
 const guestHeadline5 = document.querySelector('.guest_rentroom');
-
 var guestVal , nightVal;
 if((currentLocation === "/rentroom.html")) {
-         guests[0].addEventListener("click",function(){
-        console.log("works");
-        if(currentLocation ==="/index.html") {
-          guestInput.stepDown();
-        }else {
-          guestInput.stepUp();
-        }
+    guests[0].addEventListener("click",function(){
+        guestInput.stepUp();
         guestVal = guestInput.value;
-        if((guestVal <= 1) && (currentLocation === "/index.html")){
-          paragraph.innerText = "guest";
-        }
         if((guestVal > 1) && (currentLocation === "/rentroom.html")){
             guestHeadline5.innerText = "Guests";
         }
     });
     guests[1].addEventListener("click",function(){
-        console.log("works"); 
-        if(currentLocation ==="/index.html") {
-          guestInput.stepUp();
-        }else {
-          guestInput.stepDown();
-        }
+        guestInput.stepDown();
         guestVal = guestInput.value;
-        if((guestVal >1) && (currentLocation === "/index.html")){
-          paragraph.innerText = "guests";
-        }
         if((guestVal <= 1) && (currentLocation === "/rentroom.html")){
           guestHeadline5.innerText = "Guest";
       }
     });
+    nights[0].addEventListener("click",function(){ 
+      nightInput.stepUp();   
+      nightVal = nightInput.value;  
+      if((nightVal > 1) && (currentLocation === "/rentroom.html")){
+      nightHeadline5.innerText = "Nights";
+    } 
+    });
+    nights[1].addEventListener("click",function(){
+      nightInput.stepDown();
+      nightVal = nightInput.value;
+      if((nightVal <= 1) && (currentLocation === "/rentroom.html")){
+        nightHeadline5.innerText = "Night";
+    } 
+    });
 }
-if(currentLocation === "/rentroom.html") {
-  nights[0].addEventListener("click",function(){ 
-    console.log("works");
-    nightInput.stepUp();   
-    nightVal = nightInput.value;  
-    if((nightVal > 1) && (currentLocation === "/rentroom.html")){
-     nightHeadline5.innerText = "Nights";
- } 
-});
-nights[1].addEventListener("click",function(){
-   console.log("works");
-   nightInput.stepDown();
-   nightVal = nightInput.value;
-   if((nightVal <= 1) && (currentLocation === "/rentroom.html")){
-     nightHeadline5.innerText = "Night";
- } 
-});
-}
-
-
 // expanding text contact
 var question = document.querySelectorAll(".collaps");
 var i, lastContent,styleLastContent,displayLastContent;
@@ -146,12 +122,26 @@ $('a[href*="#"]').on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top},2000,'easeInOutExpo');
   });
-//availability 
 
+
+//availability  rooms and booking
 $("#room_availability").submit(function(event){
-  event.preventDefault();
-
+    const checkAvailabilityParagraph = document.querySelector('.availability_message_paragraph');
+    function HideOut(){
+      checkAvailabilityParagraph.style.display = "none";
+    }
+    checkAvailabilityParagraph.innerText = "This room is: ";
+    setTimeout(HideOut,30000);
 });
+$("#book_now_form").submit(function(event){
+    const bookNowConfirm = document.querySelector('.on_submit_booking_message');
+    function HideOut(){
+      bookNowConfirm.style.display = "none";
+    }
+    bookNowConfirm.style.display = "flex";
+    setTimeout(HideOut,30000);
+});
+
 //HAMBURGER NAVIGATION
 const hamburger = document.querySelector('.hamburger');
 const hamburgerMenu = document.querySelector('.hamburger-menu')

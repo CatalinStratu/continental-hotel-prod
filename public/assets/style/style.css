@@ -104,6 +104,10 @@ a {
     letter-spacing: 1px;
   }
 }
+.actual {
+  color: #C19B76 !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -1149,6 +1153,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
+  position: relative;
 }
 #overall_room .effective_room .gallery_book_now_container .book_now_rooms form {
   width: 100%;
@@ -1261,10 +1266,36 @@ a {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 85%;
 }
 #overall_room .effective_room .gallery_book_now_container .book_now_rooms form .button:hover {
   opacity: 0.9;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms .on_submit_booking_message {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 5;
+  width: 85%;
+  height: 75%;
+  background: #C19B76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms .on_submit_booking_message h5 {
+  margin-bottom: 20px;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms .on_submit_booking_message p {
+  width: 90%;
+  text-align: center;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms .on_submit_booking_message p br {
+  margin: 2px;
 }
 #overall_room .effective_room .room_description_best_rooms {
   width: 100%;
@@ -1386,7 +1417,7 @@ a {
   border: 1px solid #9c9c9c;
   padding: 7px;
 }
-#overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .book_now {
+#overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .check_availability_button {
   background-color: #1c1c1d;
   color: white;
   padding: 10px 15px;
@@ -1394,6 +1425,9 @@ a {
   width: 30%;
   border: none;
   cursor: pointer;
+}
+#overall_room .effective_room .room_description_best_rooms .room_description .check_availability .availability_message p {
+  margin: 15px 0px;
 }
 #overall_room .effective_room .room_description_best_rooms .recommended_rooms {
   width: 30%;
@@ -2278,7 +2312,7 @@ a {
 }
 #auth_container .svg_container, #auth_container .svg_container_two, #auth_container_two .svg_container, #auth_container_two .svg_container_two {
   width: 60vw;
-  height: 70vw;
+  height: 70vh;
   background: url(../images/authreg/background.svg) center no-repeat;
   background-size: 90%;
   position: inherit;
@@ -2288,11 +2322,11 @@ a {
   background: url(../images/authreg/background2.svg) center no-repeat;
   background-size: 90%;
   width: 60vw;
-  height: 70vw;
+  height: 100vh;
 }
 #auth_container .details_container, #auth_container_two .details_container {
   width: 40vw;
-  margin: 40px 10vw;
+  margin: 30px 10vw;
   height: 100%;
   position: inherit;
   z-index: 7;
@@ -4087,7 +4121,7 @@ a {
     border: 1px solid #9c9c9c;
     padding: 7px;
   }
-  #overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .book_now {
+  #overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .check_availability_button {
     background-color: #1c1c1d;
     color: white;
     padding: 10px 15px;
@@ -4471,7 +4505,7 @@ a {
     border: 1px solid #9c9c9c;
     padding: 7px;
   }
-  #overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .book_now {
+  #overall_room .effective_room .room_description_best_rooms .room_description .check_availability form .check_availability_button {
     display: flex;
     align-items: center;
     justify-content: center;

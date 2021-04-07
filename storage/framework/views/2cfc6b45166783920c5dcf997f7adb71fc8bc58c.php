@@ -13,12 +13,24 @@
                 <?php echo method_field('PUT'); ?>
                 <div class="subtitle1">Change Details</div>
                 <div class="element">
-                    <!-- <label for="names">Name</label> -->
-                    <input type="text"value="<?php echo e(old("name",Auth::user()->name)); ?>" name="name" spellcheck="false" placeholder="Name" id="names" required>
+                    <?php $__errorArgs = ['name', 'updateProfileInformation'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                        <div class="warning"><?php echo e($message); ?></div>
+                    <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                <!-- <label for="names">Name</label> -->
+                    <input type="text" value="<?php echo e(old("name",Auth::user()->name)); ?>" name="name" spellcheck="false"
+                           placeholder="Name" id="names" required>
                 </div>
                 <div class="element">
                     <!-- <label for="emails">Email</label> -->
-                    <input type="email" value="<?php echo e(old("email",Auth::user()->email)); ?>" name="email" spellcheck="false" placeholder="Email" id="emails" required>
+                    <input type="email" value="<?php echo e(old("email",Auth::user()->email)); ?>" name="email" spellcheck="false"
+                           placeholder="Email" id="emails" required>
                 </div>
 
                 <div class="edit_employee_footer">
@@ -26,25 +38,27 @@
                     <button type="update" form="settings_form_1" value="Submit">Update</button>
                 </div>
             </form>
-            <form action="#" id="settings_form_2">
+            <form action="<?php echo e(route('user.password.update')); ?>" method="POST" id="settings_form_2">
+                <?php echo csrf_field(); ?>
+                <?php echo method_field('POST'); ?>
                 <div class="subtitle1">Change Password</div>
                 <div class="element">
                     <!-- <label for="passwords">Password</label> -->
-                    <input type="password" spellcheck="false" placeholder="Old Password" id="passwords" required>
+                    <input type="password" name="old_password" spellcheck="false" placeholder="Old Password" id="passwords" required>
                 </div>
                 <div class="element">
                     <!-- <label for="passwords">Password</label> -->
-                    <input type="password" spellcheck="false" placeholder="New Password" id="passwords" required>
+                    <input type="password" name="new_password" spellcheck="false" placeholder="New Password" id="passwords" required>
                 </div>
                 <div class="element">
                     <!-- <label for="passwords">Password</label> -->
-                    <input type="password" spellcheck="false" placeholder="Confirm New Password" id="passwords"
+                    <input type="password" name="new_password_confirmation" spellcheck="false" placeholder="Confirm New Password" id="passwords"
                            required>
                 </div>
 
                 <div class="edit_employee_footer">
                     <!-- <button class="cancelBtn2" form="">Cancel</button> -->
-                    <button type="update" form="settings_form_2" value="Submit">Update</button>
+                    <button type="submit" form="settings_form_2" value="Submit">Update</button>
                 </div>
             </form>
             <!-- <hr> -->

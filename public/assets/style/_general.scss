@@ -84,7 +84,9 @@ a {
         letter-spacing: 1px;
     }    
 }
-
+.actual{
+    color:$caramelColor !important;
+}
 @mixin flexbox($position ,$position2 , $direction) {
     display:flex;
     align-items: $position;

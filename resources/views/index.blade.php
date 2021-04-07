@@ -95,7 +95,7 @@
                             <a class="fa fa-hotel"> <span>{{ $RoomType->size }}m<sup>2</sup></span></a>
                             <p> {{ $RoomType->small_description }}</p>
                             <div class="button">
-                                <a href="rentroom.html">BOOK NOW FROM {{ intval($RoomType->price) }}$</a>
+                                <a href="{{route('room_view', $RoomType->slug)}}">BOOK NOW FROM {{ intval($RoomType->price) }}$</a>
                             </div>
                         </div>
                     </div>

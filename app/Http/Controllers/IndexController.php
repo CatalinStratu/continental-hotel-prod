@@ -14,6 +14,7 @@ class IndexController extends Controller
         return view('index',compact('RoomTypes','RoomType'));
     }
 
+
     public function about()
     {
         return view('about');

@@ -56,7 +56,7 @@
         <div class="links">
             <a class="home"
                <?php echo e(Request::routeIs('index') ? ' style="color: rgb(193, 155, 118);" ' : ''); ?> href="<?php echo e(route('index')); ?>">Home</a>
-            <a class="rooms" href="rentroom.html">Rooms</a>
+            <a class="rooms actual" href="rentroom.html">Rooms</a>
             <a class="services" href="services.html">Services</a>
             <a class="about" href="<?php echo e(route('about')); ?>">About us</a>
             <a class="contact" href="contact.html">Contact</a>
@@ -71,8 +71,8 @@
                 <div class="line3"></div>
             </div>
             <div class="hamburger-menu">
-                <a class="home" href="index.html" onclick="toggleMenu()">Home</a>
-                <a class="rooms" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
+                <a class="home actual " href="index.html" onclick="toggleMenu()">Home</a>
+                <a class="rooms actual" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
                 <a class="services" href="services.html" onclick="toggleMenu()">Services</a>
                 <a class="about" href="<?php echo e(route('about')); ?>" onclick="toggleMenu()">About us</a>
                 <a class="contact" href="contact.html" onclick="toggleMenu()">Contact</a>

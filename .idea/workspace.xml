@@ -20,13 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f96eb411-e738-42c7-8ab0-bc49acf9be85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/room-view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hotel.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/_authreg.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/_authreg.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/_general.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/_mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/_mobile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/_rentroom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/_rentroom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/874cfcb53d89037a4b30efceefa8c85bfd520224.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/874cfcb53d89037a4b30efceefa8c85bfd520224.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/2cfc6b45166783920c5dcf997f7adb71fc8bc58c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2cfc6b45166783920c5dcf997f7adb71fc8bc58c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,6 +180,8 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/laravel/slack-notification-channel" />
       <path value="$PROJECT_DIR$/vendor/gpressutto5/laravel-slack" />
+      <path value="$PROJECT_DIR$/vendor/paypal/rest-api-sdk-php" />
+      <path value="$PROJECT_DIR$/vendor/srmklive/paypal" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qa9SIxSVHloNqqzzvmUDZu5ZgY" />
@@ -202,7 +218,7 @@
       <updated>1617306834802</updated>
       <workItem from="1617306835820" duration="9236000" />
       <workItem from="1617741199198" duration="6942000" />
-      <workItem from="1617807145428" duration="8770000" />
+      <workItem from="1617807145428" duration="16438000" />
     </task>
     <servers />
   </component>

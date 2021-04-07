@@ -100,7 +100,7 @@
                             <a class="fa fa-hotel"> <span><?php echo e($RoomType->size); ?>m<sup>2</sup></span></a>
                             <p> <?php echo e($RoomType->small_description); ?></p>
                             <div class="button">
-                                <a href="rentroom.html">BOOK NOW FROM <?php echo e(intval($RoomType->price)); ?>$</a>
+                                <a href="<?php echo e(route('room_view', $RoomType->slug)); ?>">BOOK NOW FROM <?php echo e(intval($RoomType->price)); ?>$</a>
                             </div>
                         </div>
                     </div>
