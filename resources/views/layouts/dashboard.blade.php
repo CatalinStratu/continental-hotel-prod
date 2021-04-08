@@ -47,13 +47,13 @@
     </div>
     <div class="nav__center">
         <div class="links">
-            <a class="home" href="index.html">Home</a>
-            <a class="rooms" href="rentroom.html">Rooms</a>
-            <a class="services" href="services.html">Services</a>
-            <a class="about" href="about.html">About us</a>
-            <a class="contact" href="contact.html">Contact</a>
+            <a class="home {{ Request::routeIs('index') ? 'actual' : '' }}" href="{{ route('index') }}">Home</a>
+            <a class="rooms {{ Request::routeIs('rooms_types') ? 'actual' : '' }}" href="{{route('rooms_types')}}">Rooms</a>
+            <a class="services {{ Request::routeIs('services') ? 'actual' : '' }}" href="{{ route('services') }}">Services</a>
+            <a class="about {{ Request::routeIs('about') ? 'actual' : '' }}" href="{{ route('about') }}">About us</a>
+            <a class="contact {{ Request::routeIs('contact') ? 'actual' : '' }}" href="{{ route('contact') }}">Contact</a>
             <div class="book_button">
-                <a href="signin.html">BOOK NOW</a>
+                <a href="{{route('rooms_types')}}">BOOK NOW</a>
             </div>
         </div>
     </div>

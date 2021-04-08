@@ -17,11 +17,13 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
-        // Use either one of the below.
         $rooms = Room::where('status','=','Empty')->get(); //Collection
-
         if (count($rooms)){
             $emptyRoom = $rooms->first();
+            $data = [
+                'status' =>'Occupied',
+            ];
+            $emptyRoom->update($data);
         } else {
             return back();
         }
@@ -36,16 +38,8 @@ class AppointmentController extends Controller
             'type_id' => '1',
             'room_id' => $emptyRoom->id,
         ]);
-        return back();
-    }
-    public function check(Request $request){
-        $request->name,
-        //Convert start and end date to date format
-        $start_date = strtotime($request->start);
-        $start_date = date('Y-m-d',$start_date);
 
-        $end_date = strtotime($request->end);
-        $end_date = date('Y-m-d',$end_date);
+        return back();
     }
     public function index()
     {

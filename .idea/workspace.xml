@@ -20,32 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f96eb411-e738-42c7-8ab0-bc49acf9be85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/appointments.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rooms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/RoomType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/RoomType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/_rentroom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/_rentroom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/style/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AppointmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AppointmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets_user/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets_user/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets_user/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets_user/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets_user/scss/_my-bookings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets_user/scss/_my-bookings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets_user/scss/_my-transactions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets_user/scss/_my-transactions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets_user/scss/_settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets_user/scss/_settings.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/room-view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/room-view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/services.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/38173999a7f7aab0a98939c2fc98798f34c023b2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/874cfcb53d89037a4b30efceefa8c85bfd520224.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/874cfcb53d89037a4b30efceefa8c85bfd520224.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b87f7414b53075c9bb8b1756bd6df87441c2e0f2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f99812b78f872204df6f959e8f41a70d862713ea.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f99812b78f872204df6f959e8f41a70d862713ea.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/fff77e7064fcf5dac18fa02372f782ceb2b55d22.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/fff77e7064fcf5dac18fa02372f782ceb2b55d22.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +207,7 @@
       <workItem from="1617741199198" duration="6942000" />
       <workItem from="1617807145428" duration="16438000" />
       <workItem from="1617859443317" duration="9500000" />
-      <workItem from="1617877134141" duration="3599000" />
+      <workItem from="1617877134141" duration="4810000" />
     </task>
     <servers />
   </component>
