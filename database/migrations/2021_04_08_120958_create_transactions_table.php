@@ -15,7 +15,12 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('room_id');
+            $table->unsignedInteger('type_id');
+            $table->decimal('price', 16);
+            $table->enum('status',['reserved','confirmed','finished','canceled'])->default('reserved');
             $table->timestamps();
+
         });
     }
 
