@@ -15,9 +15,9 @@ class RoomTypeController extends Controller
      */
     public function view($slug = null)
     {
-        $room = RoomType::whereSlug($slug)->first();
-        $similars = RoomType::where('id', '<>', $room->id)->orderBy('id', 'DESC')->take(3)->get();
-        return view('room-view', compact('room', 'similars'));
+        $RoomType = RoomType::whereSlug($slug)->first();
+        $similars = RoomType::where('id', '<>', $RoomType->id)->orderBy('id', 'DESC')->take(3)->get();
+        return view('room-view', compact('RoomType', 'similars'));
     }
 
 }

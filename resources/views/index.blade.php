@@ -22,34 +22,6 @@
                 </div>
             </div>
         </section>
-        <section id="rent_room">
-            <div class="room_background">
-                <div class="content_container_before">
-                    <h1>Holiday</h1>
-                    <h1>Enjoy</h1>
-                    <h5>X</h5>
-                    <p>The perfect couple’s staycation awaits
-                        those looking for the quintessential luxury
-                        experience. Surrounded by uncompromising
-                        comfort and world-class amenities, you may
-                        indulge in flavorful cuisine, seasonal
-                        cocktails.</p>
-                </div>
-                <div class="content_container">
-                    <div class="container_header">
-                        <h2>book a room</h2>
-                        <h4>discover luxury life.</h4>
-                    </div>
-                </div>
-                <div class="content_container_after">
-                    <h3>Best Season </h3>
-                    <h3>Price</h3>
-                    <h5>X</h5>
-                    <p>10 April to 15 April</p>
-                    <h4>230$ / <span> two persons </span></h4>
-                </div>
-            </div>
-        </section>
         <section id="relax_resort">
             <div class="content_container_before">
                 <p>CONTINENTAL HOTEL</p>
@@ -75,6 +47,7 @@
                 </div>
             </div>
         </section>
+
         <section id="best_rooms">
             <div class="title_container">
                 <p>CONTINENTAL HOTEL</p>
@@ -103,10 +76,10 @@
 
                 <div class="four_rooms">
                     @foreach ($RoomTypes as $type)
-                    <div class="square">
-                        <img src="assets/images/home/room1.jpg" alt="room1">
-                        <p>{{$type->name}} <a href="rentroom.html">BOOK FROM  {{intval($type->price)}}$ </a></p>
-                    </div>
+                        <div class="square">
+                            <img src="{{ asset($type->img) }}" alt="room1">
+                            <p>{{$type->name}} <a href="{{route('room_view', $type->slug)}}">BOOK FROM  {{intval($type->price)}}$ </a></p>
+                        </div>
                     @endforeach
                 </div>
 

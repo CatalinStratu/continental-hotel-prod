@@ -7,6 +7,7 @@ Route::get('/services', [App\Http\Controllers\IndexController::class, 'services'
 Route::get('/about-us', [App\Http\Controllers\IndexController::class, 'about'])->name('about');
 Route::get('/contact', [App\Http\Controllers\IndexController::class, 'contact'])->name('contact');
 Route::post('/new-contact', [App\Http\Controllers\IndexController::class, 'ContactPost'])->name('contact.post');
+Route::get('/rooms', [App\Http\Controllers\IndexController::class, 'rooms'])->name('rooms_types');
 
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
@@ -19,9 +20,10 @@ Route::get('/room-type/{slug}', [App\Http\Controllers\RoomTypeController::class,
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::post('appointment', [App\Http\Controllers\AppointmentController::class, 'store'])->name('Appointment');
     Route::prefix('dashboard')->group(function () {
         Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-        Route::get('settings', [App\Http\Controllers\UserController::class, 'index'])->name('user.profile.update');
+        Route::get('settings', [App\Http\Controllers\UserController::class, 'index'])->name('user.profile.update.get');
         Route::put('/user/profile/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.profile.update');
         Route::post('/user/password/update', [App\Http\Controllers\UserController::class, 'UpdatePassword'])->name('user.password.update');
     });

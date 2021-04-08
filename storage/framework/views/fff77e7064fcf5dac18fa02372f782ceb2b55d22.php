@@ -18,26 +18,17 @@
                 </div>
             </div>
             <hr>
-
-            <div class="table-row">
-                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
-                <div class="value name">Room 0.1</div>
-                <div class="value">Single</div>
-                <div class="value">€150</div>
-                <div class="value short">01.05.2021 - 02.05.2021</div>
-                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
-            </div>
-
-            <div class="table-row">
-                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
-                <div class="value name">Room 0.1</div>
-                <div class="value">Single</div>
-                <div class="value">€150</div>
-                <div class="value short">01.05.2021 - 02.05.2021</div>
-                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
-            </div>
+            <?php $__currentLoopData = $appointments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $appointment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="table-row">
+                    <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
+                    <div class="value"><?php echo e($appointment->room->name); ?></div>
+                    <div class="value"><?php echo e($appointment->type->name); ?></div>
+                    <div class="value"><?php echo e($appointment->type->price); ?> $</div>
+                    <div class="value short"> <?php echo e(\Carbon\Carbon::parse($appointment->start)->format('d/m/Y')); ?> - <?php echo e(\Carbon\Carbon::parse($appointment->end)->format('d/m/Y')); ?></div>
+                    <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
+                </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <hr>
-
         </div>
      <?php $__env->endSlot(); ?>
  <?php if (isset($__componentOriginal68fd1716d3649640b85d625349a99a37b7434812)): ?>

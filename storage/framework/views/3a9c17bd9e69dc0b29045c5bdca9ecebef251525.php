@@ -1,5 +1,10 @@
-<x-app-layout>
-    <x-slot name="content">
+ <?php if (isset($component)) { $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\AppLayout::class, []); ?>
+<?php $component->withName('app-layout'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes([]); ?>
+     <?php $__env->slot('content'); ?> 
         <div id="image_container">
             <h3>Services</h3>
             <p>We keep people together and things simple.</p>
@@ -117,5 +122,11 @@
                 </div>
             </div>
         </section>
-    </x-slot>
-</x-app-layout>
+     <?php $__env->endSlot(); ?>
+ <?php if (isset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da)): ?>
+<?php $component = $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da; ?>
+<?php unset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?> 
+<?php /**PATH C:\Users\user\openserver\OSPanel\domains\hotel.com\resources\views/services.blade.php ENDPATH**/ ?>

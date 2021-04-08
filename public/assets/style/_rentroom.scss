@@ -161,38 +161,23 @@
                                 input[type=number]::-webkit-inner-spin-button,
                                 input[type=number]::-webkit-outer-spin-button {
                                     -webkit-appearance: none;
+                                    -moz-appearance: none;
                                 }
-                                .number-input {
-                                    display: inline-flex;
-                                    @include flexbox(center,center,row);
-                                    width:50%;
-                                    height:50%;
-                                    a {
-                                        border: none;
-                                        cursor: pointer;
-                                        margin: 0;
-                                        position: relative;
-                                        
-                                        color:$lightgrey1;
-                                        font-size:1.7vw;
-                                        padding:0px 2vw;
-                                    } 
-                                    input[type=number] {
-                                        width: 3rem;
-                                        border: none;
-                                        font-size: $title03;
-                                        text-align: center;
-                                        background:$ironColor;
-                                        color:$caramelColor;
-                                    }
-                                    p {
-                                        font-size:$subtitle;
-                                        color:$ironColor;
-                                    }
-                                    .buttons {
-                                        @include flexbox(center,center,column);
-                                    }
-                                }       
+                            }
+                            .book_now_info_container_big {
+                                margin:5px;
+                                background:$ironColor;
+                                width:95%;
+                                height:90%;
+                                @include flexbox(center,center,column);
+                                h5 {
+                                    color:$lightwhiteColor;
+                                    margin-bottom: 10px;
+                                }
+                                label {
+                                    color:$purewhiteColor;
+                                    margin:5px 10px;
+                                }
                             }
                         }
                         

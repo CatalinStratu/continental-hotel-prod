@@ -13,26 +13,17 @@
                 </div>
             </div>
             <hr>
-
-            <div class="table-row">
-                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
-                <div class="value name">Room 0.1</div>
-                <div class="value">Single</div>
-                <div class="value">€150</div>
-                <div class="value short">01.05.2021 - 02.05.2021</div>
-                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
-            </div>
-
-            <div class="table-row">
-                <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
-                <div class="value name">Room 0.1</div>
-                <div class="value">Single</div>
-                <div class="value">€150</div>
-                <div class="value short">01.05.2021 - 02.05.2021</div>
-                <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
-            </div>
+            @foreach ($appointments as $appointment)
+                <div class="table-row">
+                    <div class="value center"><a href="" class="fas fa-file-alt user"></a></div>
+                    <div class="value">{{$appointment->room->name}}</div>
+                    <div class="value">{{$appointment->type->name}}</div>
+                    <div class="value">{{$appointment->type->price}} $</div>
+                    <div class="value short"> {{ \Carbon\Carbon::parse($appointment->start)->format('d/m/Y')}} - {{ \Carbon\Carbon::parse($appointment->end)->format('d/m/Y')}}</div>
+                    <div class="parameter cancel-booking"><a href="">CANCEL</a></div>
+                </div>
+            @endforeach
             <hr>
-
         </div>
     </x-slot>
 </x-dashboard-layout>

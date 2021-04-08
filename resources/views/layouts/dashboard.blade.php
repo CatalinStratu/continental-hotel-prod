@@ -19,10 +19,18 @@
         <a class="far fa-check-square" href="information.html"> Terms & Conditions</a>
     </div>
     <div class="client_area">
-        <a class="far fa-envelope bookings" href="client.html"> My Bookings</a>
+        <a class="far fa-envelope bookings" href="{{ route('dashboard') }}"> My Bookings</a>
         <div class="auth_button">
             <a class="fas fa-user-circle user-icon"></a>
-            <a href="register.html">My Account</a> / <a href="signin.html">Logout</a>
+            <a href="{{ route('dashboard') }}">Dashboard</a> /
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                    {{ __('Logout') }}
+                </a>
+            </form>
         </div>
     </div>
 </div>
@@ -64,14 +72,14 @@
         <div class="sidebar__admin">
             <img src="{{ asset('assets_user/img/user.svg') }}" alt="admin picture">
             <div class="sidebar__admin__details">
-                <p id="nume-admin">Catalin Stratu</p>
+                <p id="nume-admin">{{ auth()->user()->name }}</p>
                 <p id="functie-admin">Guest</p>
             </div>
         </div>
         <div class="sidebar__options">
             <ul>
-                <li class="actual">
-                    <a href="index.html">
+                <li class="{{ Request::routeIs('dashboard') ? 'actual' : '' }}">
+                    <a href="{{ route('dashboard') }}">
                         <div class="selector"></div><i class="far fa-calendar-alt"></i>Bookings
                     </a>
                 </li>
@@ -80,13 +88,8 @@
                         <div class="selector"></div><i class="far fa-credit-card"></i>Transactions
                     </a>
                 </li>
-                <li>
-                    <a href="review.html">
-                        <div class="selector"></div><i class="fas fa-pencil-alt"></i>Review
-                    </a>
-                </li>
-                <li>
-                    <a href="settings.html">
+                <li class="{{ Request::routeIs('user.profile.update.get') ? 'actual' : '' }}">
+                    <a href="{{ route('user.profile.update.get') }}">
                         <div class="selector"></div><i class="fas fa-cog"></i>Settings
                     </a>
                 </li>

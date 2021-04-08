@@ -46,35 +46,44 @@ const guests = document.querySelectorAll('.guestevent');
 const nightHeadline5 = document.querySelector('.night_rentroom');
 const guestHeadline5 = document.querySelector('.guest_rentroom');
 var guestVal , nightVal;
-if((currentLocation === "/rentroom.html")) {
+
+if(guests[0]){
     guests[0].addEventListener("click",function(){
-        guestInput.stepUp();
-        guestVal = guestInput.value;
-        if((guestVal > 1) && (currentLocation === "/rentroom.html")){
-            guestHeadline5.innerText = "Guests";
-        }
-    });
-    guests[1].addEventListener("click",function(){
-        guestInput.stepDown();
-        guestVal = guestInput.value;
-        if((guestVal <= 1) && (currentLocation === "/rentroom.html")){
-          guestHeadline5.innerText = "Guest";
+      guestInput.stepUp();
+      guestVal = guestInput.value;
+      if((guestVal > 1) && (currentLocation === "/rentroom.html")){
+          guestHeadline5.innerText = "Guests";
       }
-    });
+  });
+}
+
+if(guests[1]){
+  guests[1].addEventListener("click",function(){
+      guestInput.stepDown();
+      guestVal = guestInput.value;
+      if((guestVal <= 1) && (currentLocation === "/rentroom.html")){
+        guestHeadline5.innerText = "Guest";
+    }
+  });
+}
+if(nights[0]){
     nights[0].addEventListener("click",function(){ 
       nightInput.stepUp();   
       nightVal = nightInput.value;  
       if((nightVal > 1) && (currentLocation === "/rentroom.html")){
       nightHeadline5.innerText = "Nights";
     } 
-    });
-    nights[1].addEventListener("click",function(){
-      nightInput.stepDown();
-      nightVal = nightInput.value;
-      if((nightVal <= 1) && (currentLocation === "/rentroom.html")){
-        nightHeadline5.innerText = "Night";
-    } 
-    });
+ });
+}
+if(nights[1]){
+
+nights[1].addEventListener("click",function(){
+    nightInput.stepDown();
+    nightVal = nightInput.value;
+    if((nightVal <= 1) && (currentLocation === "/rentroom.html")){
+      nightHeadline5.innerText = "Night";
+  } 
+  });
 }
 // expanding text contact
 var question = document.querySelectorAll(".collaps");

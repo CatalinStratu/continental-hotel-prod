@@ -1222,42 +1222,25 @@ a {
 #overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container input[type=number]::-webkit-inner-spin-button,
 #overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
-#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container .number-input {
-  display: inline-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 50%;
-  height: 50%;
-}
-#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container .number-input a {
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  position: relative;
-  color: #9c9c9c;
-  font-size: 1.7vw;
-  padding: 0px 2vw;
-}
-#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container .number-input input[type=number] {
-  width: 3rem;
-  border: none;
-  font-size: 45px;
-  text-align: center;
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container_big {
+  margin: 5px;
   background: #1c1c1d;
-  color: #C19B76;
-}
-#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container .number-input p {
-  font-size: 35px;
-  color: #1c1c1d;
-}
-#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container .number-input .buttons {
+  width: 95%;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container_big h5 {
+  color: #f8f8ff;
+  margin-bottom: 10px;
+}
+#overall_room .effective_room .gallery_book_now_container .book_now_rooms form .book_now_information .book_now_alignment .book_now_info_container_big label {
+  color: #fff;
+  margin: 5px 10px;
 }
 #overall_room .effective_room .gallery_book_now_container .book_now_rooms form .button {
   background-color: #C19B76;

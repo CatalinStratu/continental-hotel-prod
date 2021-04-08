@@ -23,7 +23,7 @@
         <div class="client_area">
             @auth
                 <div class="my_settings">
-                    <a class="fa fa-envelope-o" href="client.html"> My Bookings</a>
+                    <a class="fa fa-envelope-o" href="{{ route('dashboard') }}"> My Bookings</a>
                 </div>
             @endif
             <div class="auth_button">
@@ -53,14 +53,13 @@
             <a href="{{ route('index') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="Continental"></a>
         </div>
         <div class="links">
-            <a class="home"
-               {{ Request::routeIs('index') ? ' style="color: rgb(193, 155, 118);" ' : '' }} href="{{ route('index') }}">Home</a>
-            <a class="rooms actual" href="rentroom.html">Rooms</a>
-            <a class="services" href="services.html">Services</a>
-            <a class="about" href="{{ route('about') }}">About us</a>
-            <a class="contact" href="contact.html">Contact</a>
+            <a class="home {{ Request::routeIs('index') ? 'actual' : '' }}" href="{{ route('index') }}">Home</a>
+            <a class="rooms {{ Request::routeIs('rooms_types') ? 'actual' : '' }}" href="{{route('rooms_types')}}">Rooms</a>
+            <a class="services {{ Request::routeIs('services') ? 'actual' : '' }}" href="{{ route('services') }}">Services</a>
+            <a class="about {{ Request::routeIs('about') ? 'actual' : '' }}" href="{{ route('about') }}">About us</a>
+            <a class="contact {{ Request::routeIs('contact') ? 'actual' : '' }}" href="{{ route('contact') }}">Contact</a>
             <div class="book_button">
-                <a href="rentroom.html">BOOK NOW</a>
+                <a href="{{route('rooms_types')}}">BOOK NOW</a>
             </div>
         </div>
         <div class="navigation">
@@ -70,11 +69,11 @@
                 <div class="line3"></div>
             </div>
             <div class="hamburger-menu">
-                <a class="home actual " href="index.html" onclick="toggleMenu()">Home</a>
-                <a class="rooms actual" href="rentroom.html" onclick="toggleMenu()">Rooms</a>
-                <a class="services" href="services.html" onclick="toggleMenu()">Services</a>
-                <a class="about" href="{{ route('about') }}" onclick="toggleMenu()">About us</a>
-                <a class="contact" href="contact.html" onclick="toggleMenu()">Contact</a>
+                <a class="home {{ Request::routeIs('index') ? 'actual' : '' }} " href="{{ route('index') }}">Home</a>
+                <a class="rooms {{ Request::routeIs('rooms_types') ? 'actual' : '' }}" href="{{route('rooms_types')}}" onclick="toggleMenu()">Rooms</a>
+                <a class="services {{ Request::routeIs('services') ? 'actual' : '' }}" href="{{ route('services') }}" onclick="toggleMenu()">Services</a>
+                <a class="about {{ Request::routeIs('about') ? 'actual' : '' }}" href="{{ route('about') }}" onclick="toggleMenu()">About us</a>
+                <a class="contact {{ Request::routeIs('contact') ? 'actual' : '' }}" href="{{ route('contact') }}" onclick="toggleMenu()">Contact</a>
             </div>
 
         </div>
@@ -115,7 +114,7 @@
     <div class="lower_content">
         <div class="links">
             <a class="home" href="{{ route('index') }}">Home</a>
-            <a class="rooms" href="rentroom.html">Rooms</a>
+            <a class="rooms" href="{{route('rooms_types')}}">Rooms</a>
             <a class="services" href="services.html">Services</a>
             <a class="about" href="{{ route('about') }}">About us</a>
             <a class="contact" href="contact.html">Contact</a>

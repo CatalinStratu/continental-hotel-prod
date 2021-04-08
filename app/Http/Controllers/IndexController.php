@@ -39,8 +39,13 @@ class IndexController extends Controller
         return view('contact');
     }
 
+    public function rooms(){
+        $RoomType = RoomType::where('id', '1')->first();
+        $RoomTypes = RoomType::orderBy('created_at', 'desc')->where('id','>', 1)->take(4)->get();
+        return view('rooms', compact('RoomTypes','RoomType'));
+    }
     public function services()
     {
-        return view('index');
+        return view('services');
     }
 }

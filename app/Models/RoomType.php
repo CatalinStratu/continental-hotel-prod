@@ -25,6 +25,7 @@ class RoomType extends Model
         'price',
         'slug',
         'guests',
+        'img',
         'small_description',
         'description',
         'size',

@@ -5,60 +5,13 @@
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes([]); ?>
      <?php $__env->slot('content'); ?> 
-        <section id="hero_content">
-            <div id="hero">
-                <h1>ENJOY A LUXURY</h1>
-                <h1> EXPERIENCE.</h1>
-                <div class="view_rooms">
-                    <a href="rentroom.html">View Rooms</a>
-                </div>
-                <hr>
-                <p>CONTINENTAL  LUXURY  HOTEL  &  BEST  RESORT</p>
-            </div>
-            <div id="lower_content">
-                <div class="adress">
-                    <p><span>ADDRESS</span> : Mihai Viteazul 4, Suceava, Romania.</p>
-                </div>
-                <div class="scroll_down">
-                    <a href="#rent_room" class="fa fa-long-arrow-down"></a>
-                </div>
-                <div class="email">
-                    <p><span>EMAIL</span> : booking@continentalhotel.com</p>
-                </div>
-            </div>
-        </section>
-        <section id="relax_resort">
-            <div class="content_container_before">
-                <p>CONTINENTAL HOTEL</p>
-                <hr>
-                <h1>Relax in our</h1>
-                <h1>Resort</h1>
-                <p>With wireless internet access, LED Flat screen TVs and 7-day room
-                    service, our accommodation combines classic elegance with the
-                    latest technology, to keep you comfortable and connected while travelling.</p>
-                <div class="button">
-                    <a href="<?php echo e(route('about')); ?>">About Us</a>
-                </div>
-            </div>
-            <div class="content_container_after">
-                <div class="image1">
-                    <img src="assets/images/home/resort1.jpg" alt="resort1">
-                </div>
-                <div class="image2">
-                    <img src="assets/images/home/resort2.jpg" alt="resort2">
-                </div>
-                <div class="image3">
-                    <img src="assets/images/home/resort3.jpg" alt="resort3">
-                </div>
-            </div>
-        </section>
-
         <section id="best_rooms">
             <div class="title_container">
                 <p>CONTINENTAL HOTEL</p>
                 <hr>
-                <h2>BEST ROOMS</h2>
+                <h2>ROOMS TYPES</h2>
             </div>
+
             <div class="rooms_container">
 
                 <div class="small_room">
@@ -97,4 +50,4 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?> 
-<?php /**PATH C:\Users\user\openserver\OSPanel\domains\hotel.com\resources\views/index.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\user\openserver\OSPanel\domains\hotel.com\resources\views/rooms.blade.php ENDPATH**/ ?>

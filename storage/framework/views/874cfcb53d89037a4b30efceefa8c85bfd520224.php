@@ -19,10 +19,19 @@
         <a class="far fa-check-square" href="information.html"> Terms & Conditions</a>
     </div>
     <div class="client_area">
-        <a class="far fa-envelope bookings" href="client.html"> My Bookings</a>
+        <a class="far fa-envelope bookings" href="<?php echo e(route('dashboard')); ?>"> My Bookings</a>
         <div class="auth_button">
             <a class="fas fa-user-circle user-icon"></a>
-            <a href="register.html">My Account</a> / <a href="signin.html">Logout</a>
+            <a href="<?php echo e(route('dashboard')); ?>">Dashboard</a> /
+            <form method="POST" action="<?php echo e(route('logout')); ?>">
+                <?php echo csrf_field(); ?>
+                <a href="<?php echo e(route('logout')); ?>"
+                   onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                    <?php echo e(__('Logout')); ?>
+
+                </a>
+            </form>
         </div>
     </div>
 </div>
@@ -64,14 +73,14 @@
         <div class="sidebar__admin">
             <img src="<?php echo e(asset('assets_user/img/user.svg')); ?>" alt="admin picture">
             <div class="sidebar__admin__details">
-                <p id="nume-admin">Catalin Stratu</p>
+                <p id="nume-admin"><?php echo e(auth()->user()->name); ?></p>
                 <p id="functie-admin">Guest</p>
             </div>
         </div>
         <div class="sidebar__options">
             <ul>
-                <li class="actual">
-                    <a href="index.html">
+                <li class="<?php echo e(Request::routeIs('dashboard') ? 'actual' : ''); ?>">
+                    <a href="<?php echo e(route('dashboard')); ?>">
                         <div class="selector"></div><i class="far fa-calendar-alt"></i>Bookings
                     </a>
                 </li>
@@ -80,13 +89,8 @@
                         <div class="selector"></div><i class="far fa-credit-card"></i>Transactions
                     </a>
                 </li>
-                <li>
-                    <a href="review.html">
-                        <div class="selector"></div><i class="fas fa-pencil-alt"></i>Review
-                    </a>
-                </li>
-                <li>
-                    <a href="settings.html">
+                <li class="<?php echo e(Request::routeIs('user.profile.update.get') ? 'actual' : ''); ?>">
+                    <a href="<?php echo e(route('user.profile.update.get')); ?>">
                         <div class="selector"></div><i class="fas fa-cog"></i>Settings
                     </a>
                 </li>
