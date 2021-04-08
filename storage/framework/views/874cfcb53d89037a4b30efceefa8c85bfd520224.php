@@ -84,8 +84,8 @@
                         <div class="selector"></div><i class="far fa-calendar-alt"></i>Bookings
                     </a>
                 </li>
-                <li>
-                    <a href="transactions.html">
+                <li class="<?php echo e(Request::routeIs('transactions') ? 'actual' : ''); ?>">
+                    <a href="<?php echo e(route('transactions')); ?>">
                         <div class="selector"></div><i class="far fa-credit-card"></i>Transactions
                     </a>
                 </li>

@@ -22,6 +22,7 @@ Route::get('/room-type/{slug}', [App\Http\Controllers\RoomTypeController::class,
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('appointment', [App\Http\Controllers\AppointmentController::class, 'store'])->name('Appointment');
     Route::prefix('dashboard')->group(function () {
+        Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('transactions');
         Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
         Route::get('settings', [App\Http\Controllers\UserController::class, 'index'])->name('user.profile.update.get');
         Route::put('/user/profile/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.profile.update');
